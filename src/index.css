@@ -22,3 +22,28 @@
   height: fit-content;
   text-align: center;
 }
+.calc-wrapper {
+  background-color: rgb(242, 232, 228);
+  height: 547px;
+}
+.calc-text-wrapper {
+  width: 28%;
+  height: 85%;
+}
+.calc-para {
+  color: #141414;
+}
+.calc-heading {
+  color: #2a2a2a;
+}
+.calc-text {
+  height: 35%;
+}
+.calc-ad {
+  background-color: #A6A6A6;
+  height: 92%;
+}
+.ad-para {
+  height: 7px;
+  margin-top: 10px;
+}

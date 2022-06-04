@@ -1,0 +1,14 @@
+.cursor-pointer {
+    cursor: pointer;
+  }
+  .calc, input {
+    background-color:  #DB022E;
+    color: White;
+  }
+  input::placeholder {
+    color: White;
+  }
+  input {
+      outline: none;
+      border: 1px solid white;
+  }
