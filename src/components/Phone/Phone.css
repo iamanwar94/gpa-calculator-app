@@ -1,0 +1,7 @@
+.phone {
+    border: 1px solid #000000;
+    border-radius: 12px;
+    width: 170px;
+    height: fit-content;
+    text-align: center;
+  }

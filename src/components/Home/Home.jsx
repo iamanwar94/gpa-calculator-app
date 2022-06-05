@@ -1,28 +1,38 @@
 import React from "react";
-import Navbar from "../Navbar";
-import Calc from "./Calc";
-
+import Navbar from "../Navbar/Navbar";
+import "./Home.css";
+import Form from "./Form/Form";
 const Home = () => {
   return (
-    <div className="home h-100 w-100">
+    <div className="home">
       <Navbar />
-      <div className="calc-wrapper d-flex justify-content-around align-items-center">
+      <div className="calc-wrapper">
         <div className="calc-text-wrapper">
-          <div className="calc-text mx-2 my-2">
+          <div className="calc-text">
             <h1 className="calc-heading">MOVE YOUR CAREER FORWARD</h1>
             <p className="calc-para">GPA Management. Career Advisory.</p>
           </div>
-          <div className="btn-div d-flex justify-content-between">
-            <button className="btn btn-danger w-50 mx-2">Play Store</button>
-            <button className="btn btn-dark w-50 mx-2">App Store</button>
+          <div className="btn-div">
+            <button className="btn btn-danger">Play Store</button>
+            <button className="btn btn-dark">App Store</button>
           </div>
-          <div className="calc-ad-wrapper h-50">
+          <div className="calc-ad-wrapper">
             <p className="ad-para">Sponsored</p>
-            <div className="calc-ad text-white px-2">Ads.</div>
+            <div className="calc-ad text-white">Ads.</div>
           </div>
         </div>
-        <div className="calc-form-wrapper w-25 h-75">
-          <Calc/>
+        <div className="calc-form-wrapper">
+          <div className="calc-form">
+            <div className="calc-form-heading">
+              <h5 className=" calc-form-heading-1 text-center text-white w-50 cursor-pointer">
+                GPA Calculator
+              </h5>
+              <h5 className=" calc-form-heading-2 text-center text-white w-50 cursor-pointer">
+                GPA Predictor
+              </h5>
+            </div>
+            <Form />
+          </div>
         </div>
       </div>
     </div>

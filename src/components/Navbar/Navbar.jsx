@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { AiFillPhone } from "react-icons/ai";
-import logo from "../images/logo.png"
-
+import logo from './images/logo.png'
+import "./Navbar.css"
 const Navbar = () => {
   return (
     <div className="navbar bg-white fw-bold">

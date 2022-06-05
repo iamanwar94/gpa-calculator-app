@@ -1,17 +1,20 @@
 import React from 'react'
-import { Routes, Route} from "react-router-dom";
-import Blog from './components/Blog';
-import Courses from './components/Courses';
-import Home from './components/Home/Home';
-import Interviews from './components/Interviews';
-import Linkedin from './components/Linkedin';
-import Phone from './components/Phone';
-import Scholarship from './components/Scholarship';
+import { Routes, Route } from "react-router-dom";
+import Blog from './components/Blog/Blog';
+import Courses from './components/Courses/Courses';
+import Home from "./components/Home/Home"
+import Interviews from './components/Interview/Interviews';
+import Linkedin from './components/Linkedin/Linkedin';
+import Phone from './components/Phone/Phone';
+import Scholarship from './components/Scholarship/Scholarship';
+// import Form from "./Form"
 
 
 const App = () => {
   return (
     <div className="App">
+      {/* <Form/> */}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
