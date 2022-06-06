@@ -1,8 +1,21 @@
 import React, { useState } from "react";
-import "./Form.css"
+import "./Form.css";
 
 const Form = () => {
-  const gradesToPoints = {"a+":4, a:4,"a-":3.7, "b+":3.3,b:3,"b-":2.7,"c+":2.3,c:2,"c-":1.7,"d+":1.3,d:1}
+  const gradesToPoints = {
+    "a+": 4,
+    a: 4,
+    "a-": 3.7,
+    "b+": 3.3,
+    b: 3,
+    "b-": 2.7,
+    "c+": 2.3,
+    c: 2,
+    "c-": 1.7,
+    "d+": 1.3,
+    d: 1,
+  };
+
   const courseFields = () => ({
     course: "",
     creditHours: "",
@@ -11,9 +24,8 @@ const Form = () => {
   const [courses, setCourses] = useState([
     courseFields(),
     courseFields(),
-    courseFields(),
+    courseFields()
   ]);
-//   const [grade, setgrade] = useState([]);
   const addCourse = () => {
     courses.length <= 4
       ? setCourses([...courses, courseFields()])
@@ -35,32 +47,19 @@ const Form = () => {
     setCourses(newCourses);
   };
   const submitHandler = () => {
-    // courses.map((course) =>
-    //   course.grade.toLowerCase() === "a+"
-    //     ? setgrade([...grade, 4])
-    //     : course.grade.toLowerCase() === "a"
-    //     ? setgrade([...grade, 4])
-    //     : course.grade.toLowerCase() === "a-"
-    //     ? setgrade([...grade, 3.7])
-    //     : course.grade.toLowerCase() === "b+"
-    //     ? setgrade([...grade, 3.3])
-    //     : course.grade.toLowerCase() === "b"
-    //     ? setgrade([...grade, 3])
-    //     : course.grade.toLowerCase() === "b-"
-    //     ? setgrade([...grade, 2.7])
-    //     : course.grade.toLowerCase() === "c+"
-    //     ? setgrade([...grade, 2.3])
-    //     : course.grade.toLowerCase() === "c"
-    //     ? setgrade([...grade, 2])
-    //     : course.grade.toLowerCase() === "c-"
-    //     ? setgrade([...grade, 1.7])
-    //     : course.grade.toLowerCase() === "d+"
-    //     ? setgrade([...grade, 1.3])
-    //     : course.grade.toLowerCase() === "d"
-    //     ? setgrade([...grade, 1])
-    //     : setgrade([...grade, 0])
-    // );
-    console.log(courses.map(course=>gradesToPoint[course.grade]));
+    const points = courses.map((course) => gradesToPoints[course.grade.toLowerCase()])
+    console.log(points)
+    const creditHours = courses.map((course) => Number(course.creditHours))
+    console.log(creditHours)
+    const pointsXcreditHours = points.map((point, i)=>(point*creditHours[i]))
+    console.log(pointsXcreditHours)
+    const result = pointsXcreditHours.reduce((prev,curr)=>(prev+curr))
+    console.log(result)
+    const totalCreditHours = creditHours.reduce((prev,curr)=>(prev+curr))
+    console.log(totalCreditHours)
+    const gpa = (result/totalCreditHours).toFixed(1)
+    console.log(gpa)
+    alert(gpa)
   };
   return (
     <div className="course-input">
