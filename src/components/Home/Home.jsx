@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Home.css";
 import Form from "./Form/Form";
+// import app from "./images/appstore.png"
+// import play from "./images/playstore.png"
 const Home = () => {
   return (
     <div className="home">
@@ -13,8 +15,14 @@ const Home = () => {
             <p className="calc-para">GPA Management. Career Advisory.</p>
           </div>
           <div className="btn-div">
-            <button className="btn btn-danger">Play Store</button>
-            <button className="btn btn-dark">App Store</button>
+            <button className="btn btn-danger">
+              <i class="fa-brands fa-google-play"></i>
+              Play Store
+            </button>
+            <button className="btn btn-dark">
+              <i class="fa-brands fa-apple"></i>
+              App Store
+            </button>
           </div>
           <div className="calc-ad-wrapper">
             <p className="ad-para">Sponsored</p>

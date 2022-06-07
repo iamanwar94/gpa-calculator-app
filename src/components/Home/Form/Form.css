@@ -1,22 +1,69 @@
-input {
-    background: #DB022E;
-    border: 1px solid white;
-    outline: none;
-    color: white;
-    padding: 5px;
-    width: 30%;
-    margin: 5px;
-}
-input::placeholder{
-    color: White;
-}
-.course-inout {
-    display: flex;
-}
 .course-input {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  padding: 30px 50px;
+}
+.form-heading {
+  text-align: center;
+  color: white;
+  line-height: 30px;
+}
+.form-para-2,
+.form-para-1 {
+  color: white;
+  text-align: center;
+  font-size: 80%;
+  line-height: 30px;
+}
+.form-para-2 {
+  margin-top: -20px;
+  line-height: 30px;
+}
+input {
+  background: #db022e;
+  border: 1px solid white;
+  outline: none;
+  color: white;
+  padding: 5px;
+  width: 30%;
+  margin: 7px;
+  border-radius: 5px;
+}
+input::placeholder {
+  color: White;
+}
+.add-more {
+    width: 95%;
+    margin: auto;
+    border: 1px solid white;
+    background-color: #db022e;
+}
+.submit-clear{
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-around;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+}
+.btn-danger {
+    background-color: #db022e;
+    border: 1px solid white;
+}
+.btn-white {
+    background-color: white;
+    color: #db022e;
+    border: 1px solid #db022e;
+}
+.btn-white:hover {
+    background-color: #db022e;
+    border: 1px solid white;
+    color: white;
+}
+.btn-danger:hover {
+    background-color: white;
+    color: #db022e;
+    border: 1px solid #db022e;
 }

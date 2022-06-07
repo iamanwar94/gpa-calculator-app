@@ -24,8 +24,9 @@ const Form = () => {
   const [courses, setCourses] = useState([
     courseFields(),
     courseFields(),
-    courseFields()
+    courseFields(),
   ]);
+  const [gpa, setGpa] = useState("");
   const addCourse = () => {
     courses.length <= 4
       ? setCourses([...courses, courseFields()])
@@ -47,22 +48,32 @@ const Form = () => {
     setCourses(newCourses);
   };
   const submitHandler = () => {
-    const points = courses.map((course) => gradesToPoints[course.grade.toLowerCase()])
-    console.log(points)
-    const creditHours = courses.map((course) => Number(course.creditHours))
-    console.log(creditHours)
-    const pointsXcreditHours = points.map((point, i)=>(point*creditHours[i]))
-    console.log(pointsXcreditHours)
-    const result = pointsXcreditHours.reduce((prev,curr)=>(prev+curr))
-    console.log(result)
-    const totalCreditHours = creditHours.reduce((prev,curr)=>(prev+curr))
-    console.log(totalCreditHours)
-    const gpa = (result/totalCreditHours).toFixed(1)
-    console.log(gpa)
-    alert(gpa)
+    const points = courses.map(
+      (course) => gradesToPoints[course.grade.toLowerCase()]
+    );
+    console.log(points);
+    const creditHours = courses.map((course) => Number(course.creditHours));
+    console.log(creditHours);
+    const pointsXcreditHours = points.map((point, i) => point * creditHours[i]);
+    console.log(pointsXcreditHours);
+    const result = pointsXcreditHours.reduce((prev, curr) => prev + curr);
+    console.log(result);
+    const totalCreditHours = creditHours.reduce((prev, curr) => prev + curr);
+    console.log(totalCreditHours);
+    const gpa = (result / totalCreditHours).toFixed(1);
+    console.log(gpa);
+    setGpa(gpa);
   };
   return (
     <div className="course-input">
+      <h3 className="form-heading">Track Your Academic Performance</h3>
+      <p className="form-para-1">
+        Use our GPA calculator and manager to track your academic performance.
+      </p>
+      <p className="form-para-2">
+        Our GPA Predictor tells you the amount of work you need to <br />
+        achieve a target GPA
+      </p>
       {courses.map((course, index) => (
         <div className="" key={index}>
           <input
@@ -88,12 +99,19 @@ const Form = () => {
           />
         </div>
       ))}
-      <button className="btn btn-danger" onClick={addCourse}>
+      <button className="btn btn-danger add-more" onClick={addCourse}>
+        <i class="fa-solid fa-circle-plus"></i>
         Add More
       </button>
-      <button className="btn btn-success" onClick={submitHandler}>
-        Submit
+      <div className="submit-clear">
+      <button className="btn btn-danger" onClick={submitHandler}>
+        Calculate
       </button>
+      <button className="btn btn-white" onClick={submitHandler}>
+        Clear
+      </button>
+      </div>
+      {/* <div>{gpa}</div> */}
     </div>
   );
 };

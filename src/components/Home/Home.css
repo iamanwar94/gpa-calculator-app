@@ -35,6 +35,9 @@
 button {
   width: 45%;
 }
+i {
+  margin-right: 20px;
+}
 .calc-ad-wrapper {
   width: 60%;
   height: 50%;
@@ -56,7 +59,7 @@ button {
 }
 .calc-form {
   width: 80%;
-  background: #DB022E;
+  background: #db022e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,9 +67,19 @@ button {
   flex-direction: column;
 }
 .calc-form-heading {
-display: flex;
-justify-content: space-around;
-align-items: center;
-height: 35px;
-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 35px;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+.calc-form-heading-1 {
+  border-right: 1px solid white;
+  height: 35px;
+  padding: 10px;
+  cursor: pointer;
+}
+.calc-form-heading-2 {
+  padding: 10px;
+  cursor: pointer;
 }

@@ -7,13 +7,10 @@ import Interviews from './components/Interview/Interviews';
 import Linkedin from './components/Linkedin/Linkedin';
 import Phone from './components/Phone/Phone';
 import Scholarship from './components/Scholarship/Scholarship';
-// import Form from "./Form"
-
 
 const App = () => {
   return (
     <div className="App">
-      {/* <Form/> */}
 
       <Routes>
         <Route path="/" element={<Home />} />
