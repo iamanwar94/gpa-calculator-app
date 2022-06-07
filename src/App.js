@@ -11,7 +11,6 @@ import Scholarship from './components/Scholarship/Scholarship';
 const App = () => {
   return (
     <div className="App">
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />

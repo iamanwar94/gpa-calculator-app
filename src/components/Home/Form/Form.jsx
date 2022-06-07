@@ -99,19 +99,23 @@ const Form = () => {
           />
         </div>
       ))}
-      <button className="btn btn-danger add-more" onClick={addCourse}>
-        <i class="fa-solid fa-circle-plus"></i>
+      <button className="btn btn-red add-more" onClick={addCourse}>
+        <i className="fa-solid fa-circle-plus"></i>
         Add More
       </button>
       <div className="submit-clear">
-      <button className="btn btn-danger" onClick={submitHandler}>
-        Calculate
-      </button>
-      <button className="btn btn-white" onClick={submitHandler}>
-        Clear
-      </button>
+        <button className="btn btn-red" onClick={submitHandler}>
+          Calculate
+        </button>
+        <button className="btn btn-white" onClick={submitHandler}>
+          Clear
+        </button>
       </div>
       {/* <div>{gpa}</div> */}
+      <h6 className="form-footer-text text-white text-center my-4">
+        Unleash the full power of Effiko GPA Manager
+      </h6>
+      <button className="btn btn-white mx-auto w-50 fw-bold">Download the Effiko App</button>
     </div>
   );
 };

@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Home.css";
 import Form from "./Form/Form";
-// import app from "./images/appstore.png"
-// import play from "./images/playstore.png"
+import dots from "./images/dots.png";
+import Calc from "./Form/Calc"
 const Home = () => {
+  const [calcClicked, setCalcClicked] = useState(true)
+  const [predictClicked, setPredictClicked] = useState(false)
+  const calcClickHandler = () =>{
+    if (!calcClicked) {
+      setCalcClicked(true)
+    }
+    }
+  const predictClickHandler = () =>{
+    if (!predictClicked) {
+      setPredictClicked(true)
+    }
+
+    }
   return (
     <div className="home">
       <Navbar />
+      <img src={dots} alt="Dots" className="dots" />
       <div className="calc-wrapper">
         <div className="calc-text-wrapper">
           <div className="calc-text">
@@ -15,12 +29,12 @@ const Home = () => {
             <p className="calc-para">GPA Management. Career Advisory.</p>
           </div>
           <div className="btn-div">
-            <button className="btn btn-danger">
-              <i class="fa-brands fa-google-play"></i>
+            <button className="btn btn-red">
+              <i className="fa-brands fa-google-play"></i>
               Play Store
             </button>
-            <button className="btn btn-dark">
-              <i class="fa-brands fa-apple"></i>
+            <button className="btn btn-black">
+              <i className="fa-brands fa-apple"></i>
               App Store
             </button>
           </div>
@@ -32,14 +46,14 @@ const Home = () => {
         <div className="calc-form-wrapper">
           <div className="calc-form">
             <div className="calc-form-heading">
-              <h5 className=" calc-form-heading-1 text-center text-white w-50 cursor-pointer">
+              <h5 onClick={calcClickHandler} className=" calc-form-heading-1 text-center text-white w-50 cursor-pointer">
                 GPA Calculator
               </h5>
-              <h5 className=" calc-form-heading-2 text-center text-white w-50 cursor-pointer">
+              <h5 onClick={predictClickHandler} className=" calc-form-heading-2 text-center text-white w-50 cursor-pointer">
                 GPA Predictor
               </h5>
             </div>
-            <Form />
+            {calcClicked?<Form />:predictClicked?<Calc/>:<Form/>}
           </div>
         </div>
       </div>
