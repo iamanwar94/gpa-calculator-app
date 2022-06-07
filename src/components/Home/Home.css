@@ -17,8 +17,8 @@
   height: 40%;
   width: 60%;
   display: flex;
-  justify-content: end;
-  align-items: start;
+  justify-content: flex-end;
+  align-items: flex-start;
   flex-direction: column;
 }
 .calc-heading {
