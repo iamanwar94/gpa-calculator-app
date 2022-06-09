@@ -115,7 +115,9 @@ const Form = () => {
       <h6 className="form-footer-text text-white text-center my-4">
         Unleash the full power of Effiko GPA Manager
       </h6>
-      <button className="btn btn-white mx-auto w-50 fw-bold">Download the Effiko App</button>
+      <button className="btn btn-white mx-auto w-50 fw-bold">
+        Download the Effiko App
+      </button>
     </div>
   );
 };

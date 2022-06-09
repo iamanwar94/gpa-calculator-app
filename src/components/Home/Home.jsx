@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../Navbar/Navbar";
 import "./Home.css";
 import Form from "./Form/Form";
 import dots from "./images/dots.png";
@@ -10,17 +9,18 @@ const Home = () => {
   const calcClickHandler = () =>{
     if (!calcClicked) {
       setCalcClicked(true)
+      setPredictClicked(false)
     }
     }
   const predictClickHandler = () =>{
     if (!predictClicked) {
       setPredictClicked(true)
+      setCalcClicked(false)
     }
 
     }
   return (
     <div className="home">
-      <Navbar />
       <img src={dots} alt="Dots" className="dots" />
       <div className="calc-wrapper">
         <div className="calc-text-wrapper">
@@ -53,7 +53,7 @@ const Home = () => {
                 GPA Predictor
               </h5>
             </div>
-            {calcClicked?<Form />:predictClicked?<Calc/>:<Form/>}
+            {calcClicked?<Form />:<Calc/>}
           </div>
         </div>
       </div>

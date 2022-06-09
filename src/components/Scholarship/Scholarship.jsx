@@ -1,12 +1,6 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar'
+import React from "react";
 const Scholarship = () => {
-  return (
-    <div>
-        <Navbar/>
-      Scholarship
-    </div>
-  )
-}
+  return <div>Scholarship</div>;
+};
 
-export default Scholarship
+export default Scholarship;

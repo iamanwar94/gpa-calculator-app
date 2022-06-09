@@ -54,7 +54,7 @@ i {
   height: 90%;
 }
 .calc-form-wrapper {
-  height: 100%;
+  max-height: 100%;
   width: 50%;
   display: flex;
   justify-content: center;
@@ -69,6 +69,8 @@ i {
   align-items: center;
   border-radius: 5px 5px 0 0;
   flex-direction: column;
+  max-height: 100%;
+
 }
 .calc-form-heading {
   display: flex;
@@ -92,4 +94,5 @@ i {
   position: absolute;
   top: 150px;
   right: 80px;
+  
 }
