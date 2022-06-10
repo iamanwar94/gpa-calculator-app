@@ -1,0 +1,16 @@
+.advisor_image_para_btn{
+    height: 400px;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: flex-end;
+}
+.black_img{
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.{
+   
+}

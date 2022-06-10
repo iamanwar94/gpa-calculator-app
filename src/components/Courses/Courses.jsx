@@ -25,6 +25,7 @@ const Courses = () => {
     getBooks();
   }, []);
 
+
   return (
     <div className="courses">
       <div className="course-wrapper">
@@ -48,8 +49,10 @@ const Courses = () => {
             <img src={lap} alt="lap" />
           </div>
         </div>
-        <div className="container border border-dark mt-5 mb-5 rounded">
-          <div className="course-card-wrapper mt-5 row">
+        <div className="container h-100">
+        <h1 className="">Courses</h1>
+        <div className="mt-5">
+          <div className="course-card-wrapper mt-5 row rounded">
             {loading ? (
               <h1 className="mb-5 mt-5 mx-auto text-center text-danger">
                 Loading...
@@ -66,6 +69,7 @@ const Courses = () => {
               ))
             )}
           </div>
+        </div>
         </div>
       </div>
     </div>
