@@ -1,9 +1,8 @@
 import React from "react";
 
-const CareerAdvisorItems = (props) => {
-  const { title, image } = props;
+const CareerAdvisorItems = ({ title, image, id }) => {
   return (
-    <div className="card" style={{ width: "100%" }}>
+    <div key={id} className="card" style={{ width: "100%" }}>
       <img
         src={
           image
@@ -15,9 +14,18 @@ const CareerAdvisorItems = (props) => {
         style={{ height: "200px" }}
       />
       <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        <p className="card-text">{title}</p>
-        <button className="btn btn-white">Enroll</button>
+        <h5 className="card-title">This is Heading</h5>
+        <p className="card-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quasi.
+        </p>
+        <div className="advisor_btn d-flex justify-content-between">
+          <button type="button" class="btn btn-white btn-sm">
+            Schedule a Call
+          </button>
+          <button type="button" class="btn btn-outline-primary btn-sm">
+            Linkedin
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,16 +1,23 @@
 .advisor_image_para_btn{
-    height: 400px;
-    width: 100vw;
+    height: 450px;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: flex-end;
+    align-items: center;
 }
 .black_img{
-    height: 100%;
+    height: 450px;
     position: absolute;
     z-index: 1;
+    width: 50%;
 }
-.{
-   
+.advisor_detail{
+   position: relative;
+   z-index: 50;
+   padding: 0 300px 0 0 ;
+   /* display: flex;
+   align-items: flex-start;
+   flex-direction: column; */
 }

@@ -9,9 +9,6 @@ import Linkedin from './components/Linkedin/Linkedin';
 import Navbar from './components/Navbar/Navbar';
 import Phone from './components/Phone/Phone';
 import Scholarship from './components/Scholarship/Scholarship';
-import "./App.css"
-import CareerAdvisor from './components/CareerAdvisor/CareerAdvisor';
-
 const App = () => {
   return (
     <div className="App">
@@ -25,7 +22,6 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/phone" element={<Phone />} />
       </Routes>
-      <CareerAdvisor/>
       <Footer />
     </div>
   )

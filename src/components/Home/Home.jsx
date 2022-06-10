@@ -3,6 +3,7 @@ import "./Home.css";
 import Form from "./Form/Form";
 import dots from "./images/dots.png";
 import Calc from "./Form/Calc"
+import CareerAdvisor from "../CareerAdvisor/CareerAdvisor";
 const Home = () => {
   const [calcClicked, setCalcClicked] = useState(true)
   const [predictClicked, setPredictClicked] = useState(false)
@@ -57,6 +58,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <CareerAdvisor/>
     </div>
   );
 };
