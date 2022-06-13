@@ -112,7 +112,7 @@ const Form = () => {
           Clear
         </button>
       </div>
-      {/* <div>{gpa}</div> */}
+      <div>{gpa}</div>
       <h6 className="form-footer-text text-white text-center my-4">
         Unleash the full power of Effiko GPA Manager
       </h6>
