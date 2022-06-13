@@ -20,12 +20,6 @@
 .linkedin_form_wrapper{
     width: 90%;
 }
-input {
-    background-color: white;
-    border: 1px solid black;
-    padding: 5px;
-    min-height: 50px;
-}
 .input {
     display: flex;
     justify-content: space-between;

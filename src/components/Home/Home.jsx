@@ -4,6 +4,7 @@ import Form from "./Form/Form";
 import dots from "./images/dots.png";
 import Calc from "./Form/Calc"
 import CareerAdvisor from "../CareerAdvisor/CareerAdvisor";
+import CareerHome from "../CareerAdvisor/CareerHome";
 const Home = () => {
   const [calcClicked, setCalcClicked] = useState(true)
   const [predictClicked, setPredictClicked] = useState(false)
@@ -58,7 +59,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <CareerAdvisor/>
+      <CareerHome/>
     </div>
   );
 };

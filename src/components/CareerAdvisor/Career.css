@@ -1,23 +1,51 @@
-.advisor_image_para_btn{
-    height: 450px;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    justify-content: flex-end;
-    align-items: center;
+.advisor_image_para_btn {
+  height: 450px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: flex-end;
+  align-items: center;
 }
-.black_img{
-    height: 450px;
-    position: absolute;
-    z-index: 1;
-    width: 50%;
+.black_img {
+  height: 450px;
+  position: absolute;
+  z-index: 1;
+  width: 50%;
 }
-.advisor_detail{
-   position: relative;
-   z-index: 50;
-   padding: 0 300px 0 0 ;
-   /* display: flex;
+.advisor_detail {
+  position: relative;
+  z-index: 50;
+  padding: 0 300px 0 0;
+  /* display: flex;
    align-items: flex-start;
    flex-direction: column; */
+}
+.career_home_top {
+  background: #f2ded5;
+  width: 99.5vw;
+}
+.career_home_para {
+  line-height: 220%;
+  color: #4a4a4a;
+}
+.career_card {
+  margin: 10px;
+  width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  /* padding: 15px; */
+}
+.career_card_row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.view_more {
+  cursor: pointer;
 }

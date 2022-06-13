@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Interviews = () => {
   return (
     <div>
-      Interviews
+      <h1 className="text-center">Interview page coming soon</h1>
     </div>
-  )
-}
+  );
+};
 
-export default Interviews
+export default Interviews;
