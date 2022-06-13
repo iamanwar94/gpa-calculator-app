@@ -2,25 +2,23 @@ import React, { useState } from "react";
 import "./Home.css";
 import Form from "./Form/Form";
 import dots from "./images/dots.png";
-import Calc from "./Form/Calc"
-import CareerAdvisor from "../CareerAdvisor/CareerAdvisor";
+import Calc from "./Form/Calc";
 import CareerHome from "../CareerAdvisor/CareerHome";
 const Home = () => {
-  const [calcClicked, setCalcClicked] = useState(true)
-  const [predictClicked, setPredictClicked] = useState(false)
-  const calcClickHandler = () =>{
+  const [calcClicked, setCalcClicked] = useState(true);
+  const [predictClicked, setPredictClicked] = useState(false);
+  const calcClickHandler = () => {
     if (!calcClicked) {
-      setCalcClicked(true)
-      setPredictClicked(false)
+      setCalcClicked(true);
+      setPredictClicked(false);
     }
-    }
-  const predictClickHandler = () =>{
+  };
+  const predictClickHandler = () => {
     if (!predictClicked) {
-      setPredictClicked(true)
-      setCalcClicked(false)
+      setPredictClicked(true);
+      setCalcClicked(false);
     }
-
-    }
+  };
   return (
     <div className="home">
       <img src={dots} alt="Dots" className="dots" />
@@ -48,18 +46,24 @@ const Home = () => {
         <div className="calc-form-wrapper">
           <div className="calc-form">
             <div className="calc-form-heading">
-              <h5 onClick={calcClickHandler} className=" calc-form-heading-1 text-center text-white w-50 cursor-pointer">
+              <h5
+                onClick={calcClickHandler}
+                className=" calc-form-heading-1 text-center text-white w-50 cursor-pointer"
+              >
                 GPA Calculator
               </h5>
-              <h5 onClick={predictClickHandler} className=" calc-form-heading-2 text-center text-white w-50 cursor-pointer">
+              <h5
+                onClick={predictClickHandler}
+                className=" calc-form-heading-2 text-center text-white w-50 cursor-pointer"
+              >
                 GPA Predictor
               </h5>
             </div>
-            {calcClicked?<Form />:<Calc/>}
+            {calcClicked ? <Form /> : <Calc />}
           </div>
         </div>
       </div>
-      <CareerHome/>
+      <CareerHome />
     </div>
   );
 };

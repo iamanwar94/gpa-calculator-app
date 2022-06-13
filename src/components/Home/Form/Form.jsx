@@ -63,6 +63,7 @@ const Form = () => {
     const gpa = (result / totalCreditHours).toFixed(1);
     console.log(gpa);
     setGpa(gpa);
+    alert(gpa)
   };
   return (
     <div className="course-input">

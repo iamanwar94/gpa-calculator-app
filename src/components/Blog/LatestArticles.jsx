@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const LatestArticles = ({ blog }) => {
   const { title, description, urlToImage } = blog;
