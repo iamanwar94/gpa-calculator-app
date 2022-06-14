@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Urbanist:wght@600&display=swap");
+
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
 }
-
-
+.schedule_call {
+  border-radius: 12px !important;
+}

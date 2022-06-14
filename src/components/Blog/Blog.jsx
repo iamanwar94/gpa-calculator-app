@@ -28,7 +28,7 @@ function Blog() {
 
   useEffect(() => {
     fetch(
-      `https://newsapi.org/v2/top-headlines?country=us&apiKey=8184969956494dc0b8dc26d7e386ad16`
+      `https://newsapi.org/v2/everything?q=crypto&apiKey=8184969956494dc0b8dc26d7e386ad16`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -58,7 +58,7 @@ function Blog() {
       ) : (
         <div className="articles_wrapper d-flex flex-wrap justify-content-around">
           <div className="latest_articles">
-            {(search ? searchBlogs : blogs).slice(10,13).map((blog) => (
+            {(search ? searchBlogs : blogs).slice(10, 13).map((blog) => (
               <LatestArticles key={blog.url} blog={blog} />
             ))}
           </div>

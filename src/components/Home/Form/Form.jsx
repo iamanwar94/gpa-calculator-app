@@ -63,7 +63,11 @@ const Form = () => {
     const gpa = (result / totalCreditHours).toFixed(1);
     console.log(gpa);
     setGpa(gpa);
-    alert(gpa)
+    alert(gpa);
+    setCourses([courseFields(), courseFields(), courseFields()]);
+  };
+  const clearSubmitHandler = () => {
+    setCourses([courseFields(), courseFields(), courseFields()]);
   };
   return (
     <div className="course-input">
@@ -108,7 +112,7 @@ const Form = () => {
         <button className="btn btn-red" onClick={submitHandler}>
           Calculate
         </button>
-        <button className="btn btn-white" onClick={submitHandler}>
+        <button className="btn btn-white" onClick={clearSubmitHandler}>
           Clear
         </button>
       </div>

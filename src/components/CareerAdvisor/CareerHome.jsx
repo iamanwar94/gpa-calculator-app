@@ -41,7 +41,7 @@ const CareerHome = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
                 excepturi facere est iure dicta vitae?
               </p>
-              <button className="btn btn-outline-danger">
+              <button className="btn btn-outline-danger btn-sm">
                 Schedule a Call
               </button>
             </div>
@@ -52,7 +52,7 @@ const CareerHome = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
                 excepturi facere est iure dicta vitae?
               </p>
-              <button className="btn btn-outline-danger">
+              <button className="btn btn-outline-danger btn-sm">
                 Schedule a Call
               </button>
             </div>
@@ -63,7 +63,7 @@ const CareerHome = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
                 excepturi facere est iure dicta vitae?
               </p>
-              <button className="btn btn-outline-danger">
+              <button className="btn btn-outline-danger btn-sm">
                 Schedule a Call
               </button>
             </div>
@@ -74,7 +74,7 @@ const CareerHome = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
                 excepturi facere est iure dicta vitae?
               </p>
-              <button className="btn btn-outline-danger">
+              <button className="btn btn-outline-danger btn-sm">
                 Schedule a Call
               </button>
             </div>
