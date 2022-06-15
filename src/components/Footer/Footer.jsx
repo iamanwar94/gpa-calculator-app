@@ -4,10 +4,13 @@ import background from "./images/background.png";
 import "./Footer.css";
 
 const Footer = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const aboutClick = () => {
-    navigate("/about")
-  }
+    navigate("/about");
+  };
+  const termsClickHandler = () => {
+    navigate("/terms");
+  };
   return (
     <footer
       className="text-center text-lg-start bg-light text-white"
@@ -38,8 +41,8 @@ const Footer = () => {
                   Privacy Policy
                 </Link>
               </p>
-              <p>
-                <Link to="/" className="text-reset">
+              <p onClick={termsClickHandler}>
+                <Link to="/terms" className="text-reset">
                   Terms and Conditions
                 </Link>
               </p>

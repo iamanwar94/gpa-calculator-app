@@ -9,6 +9,7 @@ import Home from "./components/Home/Home";
 import Interviews from "./components/Interview/Interviews";
 import Linkedin from "./components/Linkedin/Linkedin";
 import Navbar from "./components/Navbar/Navbar";
+import Terms from "./components/Terms/Terms";
 const App = () => {
   return (
     <div className="App">
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/blog" element={<Blogs />} />
         <Route path="/careerhome" element={<CareerAdvisor />} />
         <Route path="/about" element={<About />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
       <Footer />
     </div>

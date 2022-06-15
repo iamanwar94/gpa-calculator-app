@@ -74,12 +74,12 @@ const About = () => {
             <h1>
               <i className="fa-solid fa-circle small"></i>About us
             </h1>
-            <p>Lorem ipsum dolor sit.</p>
-            <p>Lorem ipsum dolor sit.</p>
-            <p>Lorem ipsum dolor sit.</p>
-            <p>Lorem ipsum dolor sit.</p>
-            <p>Lorem ipsum dolor sit.</p>
-            <p>Lorem ipsum dolor sit.</p>
+            <p>Lorem ipsum dolor sit</p>
+            <p>Lorem ipsum dolor sit</p>
+            <p>Lorem ipsum dolor sit</p>
+            <p>Lorem ipsum dolor sit</p>
+            <p>Lorem ipsum dolor sit</p>
+            <p>Lorem ipsum dolor sit</p>
           </div>
         </div>
       </div>
