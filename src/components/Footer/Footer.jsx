@@ -1,9 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import background from "./images/background.png";
 import "./Footer.css";
 
 const Footer = () => {
+  const navigate = useNavigate()
+  const aboutClick = () => {
+    navigate("/about")
+  }
   return (
     <footer
       className="text-center text-lg-start bg-light text-white"
@@ -19,8 +23,8 @@ const Footer = () => {
                   Home
                 </Link>
               </p>
-              <p>
-                <Link to="/" className="text-reset">
+              <p onClick={aboutClick}>
+                <Link to="/about" className="text-reset">
                   About Us
                 </Link>
               </p>
@@ -45,7 +49,7 @@ const Footer = () => {
                 </Link>
               </p>
               <p>
-                <Link to="/" className="text-reset">
+                <Link to="/blog" className="text-reset">
                   Efficko Blogs
                 </Link>
               </p>

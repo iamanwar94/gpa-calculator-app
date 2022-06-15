@@ -1,0 +1,10 @@
+.article_ad{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ad{
+    height: 50%;
+    background-color: grey;
+  }
