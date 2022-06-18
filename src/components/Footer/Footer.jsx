@@ -1,32 +1,33 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import News from "./News/News";
 import background from "./images/background.png";
 import "./Footer.css";
 
 const Footer = () => {
-  const navigate = useNavigate();
-  const aboutClick = () => {
-    navigate("/about");
-  };
-  const termsClickHandler = () => {
-    navigate("/terms");
-  };
   return (
     <footer
-      className="text-center text-lg-start bg-light text-white"
-      style={{ backgroundImage: `url('${background}')` }}
+      className="footer_wrapper text-center text-lg-start bg-light text-white"
+      style={{
+        backgroundImage: `url('${background}')`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
     >
+      <div className="news_wrapper_in_footer">
+        <News />
+      </div>
       <section className="">
         <div className="container text-center text-md-start">
           <div className="row">
             <div className="col-md-4 col-lg-2 col-xl-2 mx-auto mb-5 mt-5">
-              <h6 className="text-uppercase fw-bold mb-5">Company</h6>
+              <h6 className="fw-bold mb-5">Company</h6>
               <p>
                 <Link to="/" className="text-reset">
                   Home
                 </Link>
               </p>
-              <p onClick={aboutClick}>
+              <p>
                 <Link to="/about" className="text-reset">
                   About Us
                 </Link>
@@ -41,7 +42,7 @@ const Footer = () => {
                   Privacy Policy
                 </Link>
               </p>
-              <p onClick={termsClickHandler}>
+              <p>
                 <Link to="/terms" className="text-reset">
                   Terms and Conditions
                 </Link>
@@ -59,7 +60,7 @@ const Footer = () => {
             </div>
 
             <div className="col-md-4 col-lg-2 col-xl-2 mx-auto mb-5 mt-5">
-              <h6 className="text-uppercase fw-bold mb-5">Services</h6>
+              <h6 className="fw-bold mb-5">Services</h6>
               <p>
                 <Link to="/" className="text-reset">
                   Linkedin Optimization
@@ -78,7 +79,7 @@ const Footer = () => {
             </div>
 
             <div className="col-md-4 col-lg-2 col-xl-2 mx-auto mb-5 mt-5">
-              <h6 className="text-uppercase fw-bold mb-5">Resources</h6>
+              <h6 className="fw-bold mb-5">Resources</h6>
               <p>
                 <Link to="/" className="text-reset">
                   Interviews
@@ -116,7 +117,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <section className="d-flex justify-content-center justify-content-lg-between p-4 border-top">
+          <section className="footer_bottom d-flex justify-content-center justify-content-lg-between p-4 border-top">
             <div className="me-5 d-none d-lg-block">
               <span>All Rights Reserved Spreadit Limited 2022</span>
             </div>

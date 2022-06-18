@@ -21,31 +21,118 @@
    align-items: flex-start;
    flex-direction: column; */
 }
+.career_home {
+  background-color: rgb(242, 232, 228);
+  height: 200vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
 .career_home_top {
   background: #f2ded5;
   width: 99.5vw;
-}
-.career_home_para {
-  line-height: 220%;
-  color: #4a4a4a;
-}
-.career_card {
-  margin: 10px;
-  width: 300px;
-  height: 500px;
+  margin-top: 30px;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: white;
-  border-radius: 10px;
-  /* padding: 15px; */
+  padding: 50px 0;
 }
-.career_card_row {
+.career_home_img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.career_home_img img {
+  width: 438px;
+  width: 543px;
+}
+.career_home__heading_para {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.career_home__heading_para h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 30px;
+}
+.career_home__heading_para p {
+  font-size: 20px;
+  color: #2a2a2a;
+  line-height: 40px;
+  width: 85%;
+  text-align: center;
+}
+.career_home_advisors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 50%;
+  width: 100%;
+}
+.career_home_advisors h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.career_card_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.career_card {
+  background-color: white;
+  margin: 10px;
+  width: 266px;
+  height: 450px;
+  border-radius: 8px;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 50px;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
 }
-.view_more {
+.career_card h4,
+.career_card p {
+  text-align: center;
+  margin: 0 10px;
+  color: #4a4a4a;
+}
+.career_card h4 {
+  font-size: 26px;
+  font-weight: bolder;
+}
+.career_card p {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+.career_card button {
+  width: 170px;
+  height: 38px;
+  border-radius: 12px;
+  color: #db022e;
+  border: 1px solid #db022e;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0;
+}
+.career_card button:hover {
+  background-color: #db022e;
+  color: white;
+}
+
+.view_more .text-decoration-none {
   cursor: pointer;
+  color: #db022e;
+  font-size: 32px;
+  font-weight: 800;
 }

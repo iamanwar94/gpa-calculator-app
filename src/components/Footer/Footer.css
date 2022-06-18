@@ -1,3 +1,27 @@
 .text-reset {
   text-decoration: none;
 }
+.footer_wrapper{
+  padding: 100px 0 0 50px;
+}
+.footer_wrapper h6{
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.footer_wrapper p{
+  font-size: 16px;
+  line-height: 40px;
+  /* position: relative; */
+}
+
+.footer_bottom{
+  width: 85%;
+  margin: auto;
+}
+.news_wrapper_in_footer{
+  /* width: 100%; */
+  position: relative;
+  /* left: -20px; */
+}

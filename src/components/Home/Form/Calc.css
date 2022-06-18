@@ -1,0 +1,277 @@
+.gpa_predictor_wrapper {
+  width: 550px;
+  border-radius: 8px 8px 0 0;
+  background-color: #db022e;
+  position: relative;
+}
+.gpa_predictor_heading_wrapper {
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  border-bottom: 1px solid white;
+}
+.gpa_predictor_heading_wrapper .heading_text {
+  height: 60px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gpa_predictor_heading_wrapper .heading_border {
+  border-right: 1px solid white;
+}
+.gpa_predictor_heading_wrapper .heading_text h1 {
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.gpa_predictor_heading_para_wrapper {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 25px 0;
+}
+.gpa_para {
+  width: 80%;
+  color: white;
+}
+.gpa_para p {
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+}
+.gpa_predictor_form_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.inputs_wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  color: white;
+}
+
+.inputs_wrapper input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  background-color: #db022e;
+  padding: 10px 20px;
+}
+.inputs_wrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.527);
+  font-size: 10px;
+}
+.inputs_wrapper input:focus {
+  outline: none;
+}
+.single_input {
+  position: relative;
+  height: 80px;
+}
+.inputs_wrapper label {
+  position: absolute;
+  background-color: #db022e;
+  left: 20px;
+  top: -10px;
+  padding: 0 10px;
+}
+.btn_wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin: 10px 0;
+}
+
+.btn_wrapper .btn {
+  height: 38px;
+  width: 144px;
+  color: white;
+  background-color: #db022e;
+  border: 1px solid white;
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+}
+.btn_wrapper .btn_calculate {
+  background-color: white;
+  color: #db022e;
+}
+.btn_wrapper .btn_calculate:hover {
+  color: white;
+  background-color: #db022e;
+}
+.btn_wrapper .btn_clear:hover {
+  background-color: white;
+  color: #db022e;
+}
+.gpa_bottom_para {
+  color: white;
+  margin-top: 20px;
+}
+.gpa_bottom_para p {
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+}
+.bottom_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.bottom_btn .btn {
+  width: 278px;
+  height: 43px;
+  border-radius: 8px;
+  color: #db022e;
+  background-color: white;
+}
+.bottom_btn .btn:hover {
+  background-color: #db022e;
+  color: white;
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 600) {
+  .gpa_predictor_wrapper {
+    width: 350px;
+    border-radius: 4px 4px 0 0;
+  }
+  .gpa_predictor_heading_wrapper {
+    width: 350px;
+  }
+  .gpa_predictor_heading_wrapper .heading_text {
+    height: 50px;
+  }
+  .gpa_predictor_heading_wrapper .heading_text h1 {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  .gpa_predictor_heading_para_wrapper {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 25px 0;
+  }
+  .gpa_para {
+    width: 80%;
+    color: white;
+  }
+  .gpa_para p {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .gpa_predictor_form_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .inputs_wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    color: white;
+  }
+
+  .inputs_wrapper input {
+    width: 100%;
+    height: 44px;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    background-color: #db022e;
+    padding: 10px 20px;
+  }
+  .inputs_wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.527);
+    font-size: 10px;
+  }
+  .inputs_wrapper input:focus {
+    outline: none;
+  }
+  .single_input {
+    position: relative;
+    height: 80px;
+  }
+  .inputs_wrapper label {
+    position: absolute;
+    background-color: #db022e;
+    left: 20px;
+    top: -10px;
+    padding: 0 10px;
+  }
+  .btn_wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: 10px 0;
+  }
+
+  .btn_wrapper .btn {
+    height: 38px;
+    width: 144px;
+    color: white;
+    background-color: #db022e;
+    border: 1px solid white;
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+  }
+  .btn_wrapper .btn_calculate {
+    background-color: white;
+    color: #db022e;
+  }
+  .btn_wrapper .btn_calculate:hover {
+    color: white;
+    background-color: #db022e;
+  }
+  .btn_wrapper .btn_clear:hover {
+    background-color: white;
+    color: #db022e;
+  }
+  .gpa_bottom_para {
+    color: white;
+    margin-top: 20px;
+  }
+  .gpa_bottom_para p {
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+  }
+  .bottom_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .bottom_btn .btn {
+    width: 278px;
+    height: 43px;
+    border-radius: 8px;
+    color: #db022e;
+    background-color: white;
+  }
+  .bottom_btn .btn:hover {
+    background-color: #db022e;
+    color: white;
+    border: 1px solid white;
+  }
+}

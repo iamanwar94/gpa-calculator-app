@@ -1,9 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Urbanist:wght@600&display=swap");
-
+@font-face {
+  font-family: regularGreycliffCf;
+  src: url("./greycliff/Fontspring-DEMO-greycliffcf-regular.otf");
+}
+@font-face {
+  font-family: boldGreycliffCf;
+  src: url("./greycliff/Fontspring-DEMO-greycliffcf-bold.otf");
+}
+@font-face {
+  font-family: thinGreycliffCf;
+  src: url("./greycliff/Fontspring-DEMO-greycliffcf-light.otf");
+}
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Urbanist", sans-serif;
+  font-family: "regularGreycliffCf";
+  animation: all ease-in-out 0.5s;
 }
 .schedule_call {
   border-radius: 12px !important;

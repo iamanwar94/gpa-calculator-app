@@ -17,12 +17,12 @@ const Interviews = () => {
   };
   return (
     <div>
-      <YouTube
+      {/* <YouTube
         videoId="M7lc1UVf-VE"
         opts={opts}
         control="0"
         onReady={(e) => onReady(e)}
-      />
+      /> */}
       <iframe
         src="https://www.youtube.com/embed/E7wJTI-1dvQ"
         frameborder="0"

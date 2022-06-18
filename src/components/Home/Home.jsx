@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import "./Home.css";
-import Form from "./Form/Form";
+// import Form from "./Form/Form";
 import dots from "./images/dots.png";
+import uper from "./images/uper.png";
+import right from "./images/right.png";
+import circle from "./images/circle.png";
+import s from "./images/s.png";
 import Calc from "./Form/Calc";
 import CareerHome from "../CareerAdvisor/CareerHome";
+import HomeText from "./HomeText/HomeText";
+import CoursesHome from "../Courses/CoursesHome";
+import InterviewHome from "../Interview/InterviewHome";
+import BlogHome from "../Blog/BlogHome/BlogHome";
+// import CalcForm from "./Form/CalcForm/CalcForm";
 const Home = () => {
   const [calcClicked, setCalcClicked] = useState(true);
   const [predictClicked, setPredictClicked] = useState(false);
@@ -20,30 +29,30 @@ const Home = () => {
     }
   };
   return (
-    <div className="home">
-      <img src={dots} alt="Dots" className="dots" />
-      <div className="calc-wrapper">
-        <div className="calc-text-wrapper">
-          <div className="calc-text">
-            <h1 className="calc-heading">MOVE YOUR CAREER FORWARD</h1>
-            <p className="calc-para">GPA Management. Career Advisory.</p>
-          </div>
-          <div className="btn-div">
-            <button className="btn btn-red">
-              <i className="fa-brands fa-google-play"></i>
-              Play Store
-            </button>
-            <button className="btn btn-black">
-              <i className="fa-brands fa-apple"></i>
-              App Store
-            </button>
-          </div>
-          <div className="calc-ad-wrapper">
-            <p className="ad-para">Sponsored</p>
-            <div className="calc-ad text-white">Ads.</div>
-          </div>
+    <div>
+      <div className="home">
+        <div className="dots">
+          <img src={dots} alt="dots" />
         </div>
-        <div className="calc-form-wrapper">
+        <div className="s">
+          <img src={s} alt="s" />
+        </div>
+        <div className="right">
+          <img src={right} alt="right" />
+        </div>
+        <div className="uper">
+          <img src={uper} alt="uper" />
+        </div>
+        <div className="circle">
+          <img src={circle} alt="circle" />
+        </div>
+        <HomeText />
+        <div className="calc_form_wrapper">
+          {/* <CalcForm /> */}
+          <Calc />
+        </div>
+        {/* <img src={dots} alt="Dots" className="dots" /> */}
+        {/* <div className="calc-form-wrapper">
           <div className="calc-form">
             <div className="calc-form-heading">
               <h5
@@ -61,9 +70,12 @@ const Home = () => {
             </div>
             {calcClicked ? <Form /> : <Calc />}
           </div>
-        </div>
+        </div> */}
       </div>
       <CareerHome />
+      <CoursesHome />
+      <InterviewHome />
+      <BlogHome />
     </div>
   );
 };

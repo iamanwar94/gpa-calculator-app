@@ -4,66 +4,53 @@ import logo from "./images/logo.png";
 import "./Navbar.css";
 const Navbar = () => {
   return (
-    <div className="navbar bg-white">
-      <ul className="navbar_ul d-flex justify-content-around w-100 list-unstyled bg-white align-items-center h-100">
-        <li>
-          <Link to="/" className="text-decoration-none text-dark">
-            <img src={logo} alt="logo" width="151px" height="62px" />
-          </Link>
-        </li>
-        <li>
-          <Link to="/" className="navbar_link text-decoration-none text-dark">
+    <div className="navbar">
+      <div className="navbar_logo">
+        <Link className="text-decoration-none text-dark" to="/">
+          <img src={logo} alt="logo" />
+        </Link>
+      </div>
+      {/* navbar logo ends  */}
+      <div className="navbar_items">
+        <p>
+          <Link className="text-decoration-none text-dark" to="/">
             Home
           </Link>
-        </li>
-        <li>
-          <Link
-            to="/courses"
-            className=" navbar_link text-decoration-none text-dark"
-          >
+        </p>
+        <p>
+          <Link className="text-decoration-none text-dark" to="/courses">
             Courses
           </Link>
-        </li>
-        <li>
-          <Link
-            to="/scholarship"
-            className=" navbar_link text-decoration-none text-dark"
-          >
+        </p>
+        <p>
+          <Link className="text-decoration-none text-dark" to="/scholarship">
             Scholarship
           </Link>
-        </li>
-        <li>
-          <Link
-            to="/interviews"
-            className=" navbar_link text-decoration-none text-dark"
-          >
+        </p>
+        <p>
+          <Link className="text-decoration-none text-dark" to="/interviews">
             Interviews
           </Link>
-        </li>
-        <li>
-          <Link
-            to="/linkedinoptimization"
-            className=" navbar_link text-decoration-none text-dark"
-          >
+        </p>
+        <p>
+          <Link className="text-decoration-none text-dark" to="/linkedinoptimization">
             Linkedin Optimization
           </Link>
-        </li>
-        <li>
-          <Link
-            to="/blog"
-            className=" navbar_link text-decoration-none text-dark"
-          >
+        </p>
+        <p>
+          <Link className="text-decoration-none text-dark" to="/blog">
             Blog
           </Link>
-        </li>
-        <li className="phone">
+        </p>
+        <div className="navbar_button">
           <a href="tel:">
-            <button className="schedule_call btn btn-outline-dark rounded w-100 fw-bold px-4">
+            <button className="btn">
               <i className="fa-solid fa-phone"></i>Schedule a call
             </button>
           </a>
-        </li>
-      </ul>
+        </div>
+      </div>
+      {/* navbar items ends  */}
     </div>
   );
 };
