@@ -33,7 +33,7 @@ const Footer = () => {
                 </Link>
               </p>
               <p>
-                <Link to="/" className="text-reset">
+                <Link to="/contact" className="text-reset">
                   Contact
                 </Link>
               </p>

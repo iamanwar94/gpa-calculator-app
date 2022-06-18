@@ -1,0 +1,335 @@
+.contact_header {
+  display: flex;
+  justify-content: space-between;
+}
+.contact_header_logo_text_wrapper {
+  background-color: #db022e;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 280px;
+  width: 35%;
+}
+.contact_header_logo_and_text {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contact_header_text_heading {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 20px;
+}
+.contact_header_text_line {
+  border: 1px solid white;
+  background-color: white;
+  height: 200px;
+}
+.contact_header_logo_and_text img {
+  height: 94px;
+  width: 97px;
+}
+
+.contact_header_img {
+  width: 65%;
+  display: flex;
+  justify-content: flex-end;
+  height: 280px;
+}
+.map_container {
+  height: 618px;
+  width: 100%;
+}
+.contact_address_signup_wrapper {
+  height: 450px;
+  width: 90%;
+}
+.contact_address_form {
+  height: 100%;
+}
+.contact_address_text h3 {
+  font-size: 32px;
+  color: #ffffff;
+  text-shadow: 4px 4px 60px rgba(255, 255, 255, 0.25);
+}
+.contact_address_text p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-shadow: 4px 4px 60px rgba(255, 255, 255, 0.25);
+  width: 80%;
+}
+.contact_address_text a {
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 4px 4px 60px rgba(255, 255, 255, 0.25);
+}
+.contact_address_text i {
+  font-size: 32px;
+  color: #ffffff;
+}
+.contact_address_text {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 90%;
+  padding: 10px 80px;
+  background-color: #4a4a4a;
+}
+.contact_address_black {
+  height: 100%;
+  background-color: #2a2a2a;
+  width: 15%;
+}
+.contact_address_form {
+  display: flex;
+  justify-content: space-between;
+}
+.contact_address_signup_wrapper {
+  display: flex;
+  align-items: center;
+}
+.input_form_dark_red {
+  height: 70%;
+  width: 8%;
+  background-color: #94001e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.input_form_dark_red i {
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.contact_form_wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 70%;
+  align-items: center;
+}
+.input_form h1 {
+  font-size: 24px;
+  color: white;
+  margin: 10px 10px;
+}
+.input_form label {
+  font-size: 12px;
+  color: white;
+  height: 20px;
+  width: 83px;
+  background-color: #db022e;
+  left: 20px;
+  top: -2px;
+  text-align: center;
+}
+.inputs_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.input_name_email_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.input_name_email_wrapper input {
+  border: 2px solid white;
+  margin: 10px;
+  height: 44px;
+  width: 198px;
+  background-color: #db022e;
+  border-radius: 8px;
+  padding: 20px;
+  color: white;
+}
+.input_name_email_wrapper input::placeholder {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.input_name_email_wrapper input:focus {
+  outline: none;
+}
+.input_name,
+.input_email {
+  position: relative;
+}
+.input_name label,
+.input_email label {
+  position: absolute;
+}
+.contact_form_text_area {
+  position: relative;
+}
+.contact_form_text_area label {
+  position: absolute;
+  font-size: 12px;
+  color: white;
+  height: 20px;
+  width: 83px;
+  background-color: #db022e;
+  left: 20px;
+  top: -2px;
+  text-align: center;
+}
+.contact_form_text_area textarea {
+  border: 2px solid white;
+  margin: 10px;
+  height: 94px;
+  width: 427px;
+  background-color: #db022e;
+  border-radius: 8px;
+  padding: 20px;
+  color: white;
+}
+.contact_form_text_area textarea::placeholder {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.contact_form_text_area textarea:focus {
+  outline: 0;
+}
+.input_form button {
+  height: 38px;
+  width: 144px;
+  background-color: white;
+  color: #db022e;
+  border: 0;
+  outline: 0;
+  margin: 0 10px;
+}
+.input_form {
+  padding: 30px;
+  height: 70%;
+  background-color: #db022e;
+}
+.contact_address_form {
+  position: relative;
+}
+.contact_form_wrapper {
+  position: absolute;
+  right: -400px;
+}
+.contact_map_component {
+  position: relative;
+}
+.contact_address_signup_wrapper {
+  position: absolute;
+  top: 13%;
+}
+@media screen and (max-width: 600px) {
+  .contact_header_logo_text_wrapper {
+    height: 200px;
+    width: 40%;
+  }
+  .contact_header_logo_and_text {
+    width: 100%;
+  }
+  .contact_header_text_heading {
+    padding-top: 0px;
+  }
+  .contact_header_text_heading h1 {
+    font-size: 24px;
+  }
+  .contact_header_text_line {
+    height: 100px;
+    margin: 5px;
+  }
+  .contact_header_text_img img {
+    width: 47px;
+    height: 44px;
+  }
+  .contact_header_img {
+    width: 60%;
+    height: 200px;
+  }
+  .contact_header_img img {
+    display: none;
+  }
+  .map_container {
+    height: 418px;
+    width: 100%;
+  }
+  .contact_address_signup_wrapper {
+    height: 300px;
+    width: 90%;
+  }
+  .contact_address_form {
+    height: 100%;
+  }
+  .contact_address_text h3 {
+    font-size: 20px;
+    color: #ffffff;
+  }
+  .contact_address_text p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .contact_address_text a {
+    font-size: 12px;
+  }
+  .contact_address_text i {
+    font-size: 20px;
+  }
+
+  .contact_form_wrapper {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 600px) {
+  .contact_header_logo_text_wrapper {
+    height: 250px;
+    width: 35%;
+  }
+  .contact_header_logo_and_text {
+    width: 90%;
+  }
+  .contact_header_text_heading {
+    padding-top: 20px;
+  }
+  .contact_header_text_line {
+    height: 150px;
+    margin: 4px;
+  }
+  .contact_header_logo_and_text img {
+    height: 64px;
+    width: 67px;
+  }
+
+  .contact_header_img {
+    width: 65%;
+    height: 250px;
+  }
+  .contact_header_img img {
+    display: none;
+  }
+  .contact_address_signup_wrapper {
+    height: 450px;
+    width: 90%;
+  }
+  .contact_address_text h3 {
+    font-size: 28px;
+  }
+  .contact_address_text a {
+    font-size: 14px;
+  }
+  .contact_address_text i {
+    font-size: 28px;
+  }
+  .contact_address_black {
+    width: 12%;
+  }
+  .contact_form_wrapper {
+    display: none;
+  }
+}

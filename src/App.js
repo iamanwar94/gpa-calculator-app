@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import About from "./components/About/About";
 import Blogs from "./components/Blog/Blogs";
 import CareerAdvisor from "./components/CareerAdvisor/CareerAdvisor";
+import Contact from "./components/Contact/Contact";
 import Courses from "./components/Courses/Courses";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/careerhome" element={<CareerAdvisor />} />
         <Route path="/about" element={<About />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>

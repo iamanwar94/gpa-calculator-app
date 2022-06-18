@@ -19,3 +19,6 @@
 .schedule_call {
   border-radius: 12px !important;
 }
+a {
+  text-decoration: none;
+}
