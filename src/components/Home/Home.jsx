@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.css";
 // import Form from "./Form/Form";
 import dots from "./images/dots.png";

@@ -134,6 +134,7 @@ const Form = () => {
       </div>
       <div className="gpa_bottom_para">
         <p>Unleash the full power of the Effiko GPA Manager. </p>
+        <p>{gpa}</p>
       </div>
       {/* bottom para ends here  */}
       <div className="bottom_btn">
