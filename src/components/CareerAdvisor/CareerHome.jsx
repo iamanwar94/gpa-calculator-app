@@ -5,7 +5,7 @@ import img3 from "./images/img3.png";
 import img4 from "./images/img4.png";
 import img2 from "./images/img2.png";
 import { Link } from "react-router-dom";
-import Ad from  '../Ad/Ads'
+import Ad from "../Ad/Ads";
 
 const CareerHome = () => {
   return (
@@ -39,11 +39,9 @@ const CareerHome = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
               excepturi facere est iure dicta vitae?
             </p>
-            <button className="">
-              Schedule a Call
-            </button>
+            <button className="">Schedule a Call</button>
           </div>
-          <div className="career_card">
+          <div className="career_card card_none">
             <img src={img2} alt="img1" />
             <h4 className="">Ahmed</h4>
             <p className="">
@@ -61,7 +59,7 @@ const CareerHome = () => {
             </p>
             <button className="">Schedule a Call</button>
           </div>
-          <div className="career_card">
+          <div className="career_card card_none">
             <img src={img4} alt="img1" />
             <h4 className="">Ahmed</h4>
             <p className="">
@@ -71,13 +69,15 @@ const CareerHome = () => {
             <button className="">Schedule a Call</button>
           </div>
         </div>
-        <h2 className="view_more">
+        <h2 className="view_more mt-3 mb-3">
           <Link to="/careerhome" className="text-decoration-none">
             View More <i className="fa-solid fa-arrow-right"></i>
           </Link>
         </h2>
       </div>
-      <Ad/>
+      <div className="career_home_ad_wrapper">
+        <Ad />
+      </div>
     </div>
   );
 };

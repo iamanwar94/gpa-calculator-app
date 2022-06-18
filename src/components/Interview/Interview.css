@@ -31,7 +31,23 @@
   font-weight: lighter;
 }
 
-.view_more{
-    margin: 0;
-    padding: 0;
+.view_more {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .interview_home_content_wrapper {
+    width: 100%;
+    flex-direction: column;
+  
+  }
+  .interview_heading_para_wrapper h2 {
+    font-size: 24px;
+  }
+  .interview_heading_para_wrapper p {
+    font-size: 16px;
+  }
 }

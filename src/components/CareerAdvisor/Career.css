@@ -23,12 +23,13 @@
 }
 .career_home {
   background-color: rgb(242, 232, 228);
-  height: 200vh;
+  height: 220vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+  position: relative;
 }
 .career_home_top {
   background: #f2ded5;
@@ -37,7 +38,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 50px 0;
+  padding: 80px 0 250px 0;
 }
 .career_home_img {
   width: 50%;
@@ -74,12 +75,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 50%;
+  height: fit-content;
   width: 100%;
+  position: absolute;
+  top: 40%;
 }
 .career_home_advisors h1 {
   font-size: 40px;
   font-weight: 700;
+  margin: 30px 0;
 }
 .career_card_wrapper {
   display: flex;
@@ -135,4 +139,109 @@
   color: #db022e;
   font-size: 32px;
   font-weight: 800;
+}
+.career_home_ad_wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin: 400px 0 0 0;
+}
+
+@media screen and (max-width: 600px) {
+  .career_home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  .career_home_top {
+    background: #f2ded5;
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+  }
+  .career_home_img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .career_home_img img {
+    width: 300px;
+    height: 300px;
+  }
+  .career_home__heading_para {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .career_home__heading_para h1 {
+    font-size: 28px;
+    margin: 10px 0;
+  }
+  .career_home__heading_para p {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 10px 0;
+  }
+  .career_home_advisors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: first baseline;
+    position: static;
+  }
+  .career_home_advisors h1 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  .career_card {
+    background-color: white;
+    margin: 10px;
+    width: 200px;
+    height: 350px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+  }
+  .card_none{
+    display: none;
+  }
+  .career_card h4 {
+    font-size: 20px;
+  }
+  .career_card p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+  .career_card button {
+    width: 120px;
+    height: 32px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .view_more .text-decoration-none {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .career_home_ad_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin: 400px 0 0 0;
+  }
 }

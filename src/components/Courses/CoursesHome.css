@@ -55,5 +55,41 @@
   cursor: pointer;
 }
 .courses_home_ad_wrapper {
+  width: 104.6%;
+  background-color: rgb(242, 232, 228);
+  margin-bottom: -29px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+
+  .courses_home_heading_para_wrapper {
     width: 100%;
+  }
+  .courses_home_heading_para_wrapper h1 {
+    text-align: center;
+    font-size: 24px;
+  }
+  .courses_home_heading_para_wrapper p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  
+  
+  .view_more h3,
+  .view_more i {
+    font-size: 28px;
+    font-weight: 700;
+    color: #db022e;
+    padding: 0;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .courses_home_ad_wrapper {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  
 }

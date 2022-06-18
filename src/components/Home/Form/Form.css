@@ -1,103 +1,154 @@
-.course-input {
+.gpa_calculator_wrapper {
   display: flex;
-  flex-direction: column;
-  align-content: center;
   justify-content: center;
-  width: 100%;
-  padding: 30px 50px;
+  align-items: center;
+  flex-direction: column;
 }
-.form-heading {
-  text-align: center;
-  color: white;
-  line-height: 30px;
-}
-.form-para-2,
-.form-para-1 {
-  color: white;
-  text-align: center;
-  font-size: 80%;
-  line-height: 30px;
-}
-.form-para-2 {
-  margin-top: -20px;
-  line-height: 30px;
-}
-.course-input input {
-  background: #db022e;
-  border: 1px solid white;
-  outline: none;
-  color: white;
-  padding: 5px;
-  width: 30%;
-  margin: 7px;
-  border-radius: 5px;
-}
-.course-input input::placeholder {
-  color: rgb(204, 198, 198);
-  font-size: 60%;
-}
-.add-more {
-  width: 90%;
-  margin: auto;
-  border: 1px solid white;
-  background-color: #db022e;
-}
-.submit-clear {
+.gpa_calculator_heading_para_wrapper {
   display: flex;
-  justify-content: space-around;
-  width: 70%;
-  margin: auto;
-  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  color: white;
+  margin: 30px auto;
 }
-.btn-red {
+.gpa_calculator_heading_para_wrapper h3 {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 50px;
+}
+.gpa_calculator_heading_para_wrapper p {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 90%;
+}
+.gpa_calculator_form_wrapper {
+  width: 80%;
+}
+.gpa_calculator_inputs_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input_wrapper input {
+  width: 140px;
+  height: 44px;
+  border: 2px solid white;
+  padding: 0 20px;
   background-color: #db022e;
-  border: 1px solid white;
+  border-radius: 4px;
   color: white;
+  margin: 10px 0;
 }
-.btn-white {
-  background-color: white;
-  color: #db022e;
-  border: 1px solid #db022e;
+.input_name input {
+  width: 160px;
 }
-.btn-white:hover {
-  background-color: #db022e;
-  border: 1px solid white;
-  color: white;
+.input_hours input {
+  width: 140px;
 }
-.btn-red:hover {
-  background-color: white;
-  color: #db022e;
-  border: 1px solid #db022e;
+.input_grade input {
+  width: 110px;
 }
-.btn-black {
-  background-color: black;
-  color: white;
-  outline: none;
+.input_wrapper input::placeholder {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.548);
 }
-.btn-black:hover {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
+.input_wrapper input:focus {
+  outline: 0;
 }
-.course-input input:focus::-webkit-input-placeholder {
-  font-size: .75em;
+.gpa_calculator_add_more_btn_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+.input_wrapper {
   position: relative;
-  top: -15px; 
-  transition: 0.2s ease-out;
+}
+.input_wrapper label {
+  background-color: #db022e;
+  font-size: 10px;
+  width: 83px;
+  color: white;
+  position: absolute;
+  left: 13px;
+  top: 5px;
+  padding: 0 5px;
 }
 
-.course-input input::-webkit-input-placeholder {
-  transition: 0.2s ease-in;
+.gpa_calculator_add_more_btn_wrapper button {
+  background-color: #db022e;
+  width: 100%;
+  height: 44px;
+  margin: 10px 0;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+.gpa_calculator_add_more_btn_wrapper button:hover {
+  color: #db022e;
+  background-color: white;
+}
+.gpa_calculator_add_more_btn_wrapper i {
+  padding: 0;
+  margin: 0 10px;
+  font-size: 18px;
 }
 
-.course-input input[type="text"]:focus {
-  height: 40px;
-  padding-bottom: 0px;
-  transition: 0.2s ease-in;
-}
+@media screen and (max-width: 600px){
+  .gpa_calculator_heading_para_wrapper {
+    display: flex;
+    margin: 15px auto;
+  }
+  .gpa_calculator_heading_para_wrapper h3 {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+  .gpa_calculator_heading_para_wrapper p {
+    font-size: 10px;
+  }
+  .gpa_calculator_form_wrapper {
+    width: 95%;
+  }
+  .input_wrapper input {
+    width: 100px;
+    height: 32px;
+    border: 1px solid white;
+    padding: 0 10px;
+    margin: 8px 0;
+    font-size: 12px;
+  }
+  .input_name input {
+    width: 140px;
+  }
+  .input_hours input {
+    width: 120px;
+  }
+  .input_grade input {
+    width: 100px;
+  }
 
-.course-input input[type="text"] {
-  height: 40px;
-  transition: 0.2s ease-in;
+  .gpa_calculator_add_more_btn_wrapper {
+    width: 90%;
+  }
+  .input_wrapper {
+    position: relative;
+  }
+  .input_wrapper label {
+    width: 70px;
+    font-size: 8px;
+  }
+  
+  .gpa_calculator_add_more_btn_wrapper button {
+    height: 32px;
+    font-size: 12px;
+    font-weight: 500;
+  }
 }
-

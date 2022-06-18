@@ -70,59 +70,75 @@ const Form = () => {
     setCourses([courseFields(), courseFields(), courseFields()]);
   };
   return (
-    <div className="course-input">
-      <h3 className="form-heading">Track Your Academic Performance</h3>
-      <p className="form-para-1">
-        Use our GPA calculator and manager to track your academic performance.
-      </p>
-      <p className="form-para-2">
-        Our GPA Predictor tells you the amount of work you need to <br />
-        achieve a target GPA
-      </p>
-      {courses.map((course, index) => (
-        <div className="" key={index}>
-          <input
-            type="text"
-            name="course"
-            placeholder="Course Name"
-            value={course.course}
-            onChange={(e) => onChange(e, index)}
-          />
-          <input
-            type="text"
-            name="creditHours"
-            placeholder="Credit Hours"
-            value={course.creditHours}
-            onChange={(e) => onChange(e, index)}
-          />
-          <input
-            type="text"
-            name="grade"
-            placeholder="Grade"
-            value={course.grade}
-            onChange={(e) => onChange(e, index)}
-          />
-        </div>
-      ))}
-      <button className="btn btn-red add-more" onClick={addCourse}>
-        <i className="fa-solid fa-circle-plus"></i>
-        Add More
-      </button>
-      <div className="submit-clear">
-        <button className="btn btn-red" onClick={submitHandler}>
+    <div className="gpa_calculator_wrapper">
+      <div className="gpa_calculator_heading_para_wrapper">
+        <h3>Track Your Academic Performance</h3>
+        <p>
+          Use our GPA calculator and manager to track your academic performance.
+          Our GPA Predictor tells you the amount of work you need to achieve a
+          target GPA
+        </p>
+      </div>
+      <div className="gpa_calculator_form_wrapper">
+        {courses.map((course, index) => (
+          <div className="gpa_calculator_inputs_wrapper" key={index}>
+            <div className="input_name input_wrapper">
+              <label htmlFor="name">Course Name</label>
+              <input
+                type="text"
+                name="course"
+                id="name"
+                placeholder="Course Name"
+                value={course.course}
+                onChange={(e) => onChange(e, index)}
+              />
+            </div>
+            <div className="input_hours input_wrapper">
+              <label htmlFor="creditHours">Credit Hours</label>
+              <input
+                type="text"
+                name="creditHours"
+                id="creditHours"
+                placeholder="Credit Hours"
+                value={course.creditHours}
+                onChange={(e) => onChange(e, index)}
+              />
+            </div>
+            <div className="input_grade input_wrapper">
+              <label htmlFor="grade">Grade</label>
+              <input
+                type="text"
+                name="grade"
+                id="grade"
+                placeholder="Grade"
+                value={course.grade}
+                onChange={(e) => onChange(e, index)}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="gpa_calculator_add_more_btn_wrapper">
+        <button onClick={addCourse}>
+          <i className="fa-solid fa-circle-plus"></i>
+          Add More
+        </button>
+      </div>
+      <div className="btn_wrapper">
+        <button className="btn btn_calculate" onClick={submitHandler}>
           Calculate
         </button>
-        <button className="btn btn-white" onClick={clearSubmitHandler}>
+        <button className="btn btn_clear" onClick={clearSubmitHandler}>
           Clear
         </button>
       </div>
-      <div>{gpa}</div>
-      <h6 className="form-footer-text text-white text-center my-4">
-        Unleash the full power of Effiko GPA Manager
-      </h6>
-      <button className="btn btn-white mx-auto w-50 fw-bold">
-        Download the Effiko App
-      </button>
+      <div className="gpa_bottom_para">
+        <p>Unleash the full power of the Effiko GPA Manager. </p>
+      </div>
+      {/* bottom para ends here  */}
+      <div className="bottom_btn">
+        <button className="btn">Download the Effiko app</button>
+      </div>
     </div>
   );
 };

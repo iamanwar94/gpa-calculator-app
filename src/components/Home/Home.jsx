@@ -14,20 +14,6 @@ import InterviewHome from "../Interview/InterviewHome";
 import BlogHome from "../Blog/BlogHome/BlogHome";
 // import CalcForm from "./Form/CalcForm/CalcForm";
 const Home = () => {
-  const [calcClicked, setCalcClicked] = useState(true);
-  const [predictClicked, setPredictClicked] = useState(false);
-  const calcClickHandler = () => {
-    if (!calcClicked) {
-      setCalcClicked(true);
-      setPredictClicked(false);
-    }
-  };
-  const predictClickHandler = () => {
-    if (!predictClicked) {
-      setPredictClicked(true);
-      setCalcClicked(false);
-    }
-  };
   return (
     <div>
       <div className="home">
@@ -46,31 +32,10 @@ const Home = () => {
         <div className="circle">
           <img src={circle} alt="circle" />
         </div>
-        <HomeText />
-        <div className="calc_form_wrapper">
-          {/* <CalcForm /> */}
+        <div className="home_header_wrapper">
+          <HomeText />
           <Calc />
         </div>
-        {/* <img src={dots} alt="Dots" className="dots" /> */}
-        {/* <div className="calc-form-wrapper">
-          <div className="calc-form">
-            <div className="calc-form-heading">
-              <h5
-                onClick={calcClickHandler}
-                className=" calc-form-heading-1 text-center text-white w-50 cursor-pointer"
-              >
-                GPA Calculator
-              </h5>
-              <h5
-                onClick={predictClickHandler}
-                className=" calc-form-heading-2 text-center text-white w-50 cursor-pointer"
-              >
-                GPA Predictor
-              </h5>
-            </div>
-            {calcClicked ? <Form /> : <Calc />}
-          </div>
-        </div> */}
       </div>
       <CareerHome />
       <CoursesHome />
