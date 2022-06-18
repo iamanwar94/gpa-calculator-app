@@ -1,16 +1,9 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import background from "./images/background.png";
 import "./Footer.css";
 
 const Footer = () => {
-  const navigate = useNavigate();
-  const aboutClick = () => {
-    navigate("/about");
-  };
-  const termsClickHandler = () => {
-    navigate("/terms");
-  };
   return (
     <footer
       className="text-center text-lg-start bg-light text-white"
@@ -26,13 +19,13 @@ const Footer = () => {
                   Home
                 </Link>
               </p>
-              <p onClick={aboutClick}>
+              <p>
                 <Link to="/about" className="text-reset">
                   About Us
                 </Link>
               </p>
               <p>
-                <Link to="/" className="text-reset">
+                <Link to="/contact" className="text-reset">
                   Contact
                 </Link>
               </p>
@@ -41,7 +34,7 @@ const Footer = () => {
                   Privacy Policy
                 </Link>
               </p>
-              <p onClick={termsClickHandler}>
+              <p>
                 <Link to="/terms" className="text-reset">
                   Terms and Conditions
                 </Link>
