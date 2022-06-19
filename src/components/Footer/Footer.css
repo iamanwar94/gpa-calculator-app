@@ -25,3 +25,12 @@
   position: relative;
   /* left: -20px; */
 }
+
+@media screen and (max-width:600px) {
+
+  .news_wrapper_in_footer{
+  position: static;
+  width: 90%;
+
+}
+}

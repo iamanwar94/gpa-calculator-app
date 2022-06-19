@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Urbanist:wght@600&display=swap");
+
+.nav {
+  height: 112px;
+  width: 100%;
+  background-color: #ffffff;
+  position: relative;
+  font-family: "Urbanist", sans-serif;
+}
+
+.nav > .nav-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-title img {
+  height: 62px;
+  width: 151px;
+}
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.navbar_button button {
+  height: 38px;
+  width: 170px;
+  border-radius: 12px;
+  border: 1px solid black;
+  background-color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+.navbar_button button:hover {
+  color: white;
+  background-color: black;
+}
+.navbar_button i {
+  margin: 0 8px 0 0;
+}
+.nav > .nav-header > .nav-title {
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+}
+
+.nav > .nav-links > p:hover {
+  color: #db022e;
+  font-size: 18px;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #db022e;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 100px;
+    left: 0;
+    padding: 30px 0 0 60px;
+  }
+  .nav > .nav-links > p {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}

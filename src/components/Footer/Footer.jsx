@@ -17,9 +17,9 @@ const Footer = () => {
       <div className="news_wrapper_in_footer">
         <News />
       </div>
-      <section className="">
+      <section className="mx-auto">
         <div className="container text-center text-md-start">
-          <div className="row">
+          <div className="row mx-auto">
             <div className="col-md-4 col-lg-2 col-xl-2 mx-auto mb-5 mt-5">
               <h6 className="fw-bold mb-5">Company</h6>
               <p>

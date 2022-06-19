@@ -1,23 +1,27 @@
 import React from "react";
+import "./Courses.css";
 
 const CourseItems = (props) => {
   const { title, image } = props;
   return (
-    <div className="card" style={{ width: "100%" }}>
-      <img
-        src={
-          image
-            ? image
-            : "http://t0.gstatic.com/images?q=tbn:ANd9GcTBQZSg-b2LFkLlt9fWndS1w8SONabDZBHf0dtdb3-bqcuKxduL"
-        }
-        alt={title}
-        className="card-img-top rounded"
-        style={{ height: "200px" }}
-      />
-      <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        <p className="card-text">{title}</p>
-        <button className="btn btn-white">Enroll</button>
+    <div className="courses_card">
+      <div className="courses_card_image_wrapper">
+        <img
+          src={
+            image
+              ? image
+              : "http://t0.gstatic.com/images?q=tbn:ANd9GcTBQZSg-b2LFkLlt9fWndS1w8SONabDZBHf0dtdb3-bqcuKxduL"
+          }
+          alt={title}
+        />
+      </div>
+      <div className="courses_card_content_wrapper">
+        <h5>{title}</h5>
+        <p>
+          {title} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Euismod.
+        </p>
+        <button>Enroll</button>
       </div>
     </div>
   );

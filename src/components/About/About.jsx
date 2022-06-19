@@ -1,4 +1,5 @@
 import React from "react";
+import ResponsiveNavbar from "../Navbar/ReponsiveNavbar/ResponsiveNavbar";
 import "./About.css";
 import aboutgirl from "./aboutgirl.png";
 import effiko from "./effiko.png";
@@ -7,6 +8,7 @@ import logo from "./logo.png";
 const About = () => {
   return (
     <div className="about_wrapper">
+      <ResponsiveNavbar />
       <div className="about_header_wrapper">
         <div className="about_header container">
           <div
@@ -19,7 +21,7 @@ const About = () => {
               backgroundSize: "cover",
             }}
           >
-            <img src={effiko} alt="effiko" />
+            {/* <img src={effiko} alt="effiko" /> */}
             <h1>EFFIKO</h1>
             <h1>WEBSITE</h1>
             <p>

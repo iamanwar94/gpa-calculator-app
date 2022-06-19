@@ -10,11 +10,13 @@ import Home from "./components/Home/Home";
 import Interviews from "./components/Interview/Interviews";
 import Linkedin from "./components/Linkedin/Linkedin";
 import Navbar from "./components/Navbar/Navbar";
+import ResponsiveNavbar from "./components/Navbar/ReponsiveNavbar/ResponsiveNavbar";
 import Terms from "./components/Terms/Terms";
 const App = () => {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
+      {/* <ResponsiveNavbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
