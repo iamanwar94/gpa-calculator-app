@@ -15,7 +15,7 @@ import Terms from "./components/Terms/Terms";
 const App = () => {
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <Navbar />
       {/* <ResponsiveNavbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />

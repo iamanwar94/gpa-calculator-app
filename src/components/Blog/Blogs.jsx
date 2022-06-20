@@ -9,8 +9,14 @@ import flower from "./images/flowers.png";
 import stone from "./images/stone.png";
 import Ads from "../Ad/Ads";
 import "./Blogs.css";
+import { useNavigate } from "react-router-dom";
 
 const Blogs = () => {
+  const navigate = useNavigate();
+
+  const clickHandler = () => {
+    navigate("/blogitem");
+  };
   return (
     <div className="blogs_wrapper">
       <div
@@ -23,7 +29,10 @@ const Blogs = () => {
           backgroundSize: "cover",
         }}
       >
-        <div className="blog_header_content_wrapper container">
+        <div
+          className="blog_header_content_wrapper container"
+          onClick={clickHandler}
+        >
           <div className="blogs_search_wrapper">
             <input
               type="text"
