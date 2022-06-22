@@ -1,11 +1,11 @@
 import React from "react";
 import blog from "./images/blogbg.png";
 import smallone from "./images/blogbgsmall1.png";
-import smalltwo from "./images/blogbgsmall2.png";
+// import smalltwo from "./images/blogbgsmall2.png";
 import feature from "./images/blogbgfeature.png";
-import allart from "./images/bgallarticles.png";
-import stair from "./images/stair.png";
-import flower from "./images/flowers.png";
+// import allart from "./images/bgallarticles.png";
+// import stair from "./images/stair.png";
+// import flower from "./images/flowers.png";
 import stone from "./images/stone.png";
 import Ads from "../Ad/Ads";
 import "./Blogs.css";

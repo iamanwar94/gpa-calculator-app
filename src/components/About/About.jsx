@@ -2,7 +2,7 @@ import React from "react";
 import ResponsiveNavbar from "../Navbar/ReponsiveNavbar/ResponsiveNavbar";
 import "./About.css";
 import aboutgirl from "./aboutgirl.png";
-import effiko from "./effiko.png";
+// import effiko from "./effiko.png";
 import logo from "./logo.png";
 
 const About = () => {
