@@ -2,7 +2,6 @@ import React from "react";
 import colors from "./images/colors.png";
 import black from "./images/black.png";
 import "./Linkedin.css";
-
 const Linkedin = () => {
   return (
     <div className="linkedin bg-danger">

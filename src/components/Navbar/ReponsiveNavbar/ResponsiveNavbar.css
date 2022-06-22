@@ -40,7 +40,7 @@ p {
   margin: 0 8px 0 0;
 }
 .nav > .nav-header > .nav-title {
-  margin-left: 50px;
+  margin-left: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,10 +69,14 @@ p {
 }
 
 @media (max-width: 600px) {
+  .nav .nav-links {
+    position: absolute;
+    z-index: 100;
+  }
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
-    right: 20px;
+    right: 30px;
     top: 30px;
   }
   .nav > .nav-btn > label {
@@ -112,7 +116,7 @@ p {
     height: 0px;
   }
   .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
+    height: calc(100vh - 120px);
     overflow-y: auto;
   }
 }

@@ -97,12 +97,12 @@
     font-size: 16px;
   }
   .home_text_heading_para_button .btn_div {
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .btn_div button {
-    height: 34px;
-    width: 130px;
-    font-size: 12px;
+    height: 36px;
+    width: 150px;
+    font-size: 14px;
   }
   .btn_div i {
     margin: 0 10px 0 0;

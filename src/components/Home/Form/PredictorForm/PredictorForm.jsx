@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { clickTrue } from "../../../../features/gpaSlice";
+import { useDispatch } from "react-redux";
 
-const CalcForm = () => {
+const PredictorForm = () => {
+  const dispatch = useDispatch();
   const [current, setCurrent] = useState("");
   const [target, setTarget] = useState("");
   const [totalCcredit, setTotalCcredit] = useState("");
@@ -24,8 +27,9 @@ const CalcForm = () => {
     const differnce = totalPoints - pointsGot;
     const result = differnce / Number(remaingCredit);
     const prediction = result.toFixed(1);
-    alert(prediction);
+    alert(prediction)
     clearValuesHandler();
+    dispatch(clickTrue());
   };
   const clearValuesHandler = () => {
     setCurrent("");
@@ -95,4 +99,4 @@ const CalcForm = () => {
   );
 };
 
-export default CalcForm;
+export default PredictorForm;

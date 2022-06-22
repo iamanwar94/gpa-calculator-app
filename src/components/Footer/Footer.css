@@ -2,7 +2,7 @@
   text-decoration: none;
 }
 .footer_wrapper{
-  padding: 100px 0 0 50px;
+  padding: 100px 0 0 0px;
 }
 .footer_wrapper h6{
   font-size: 36px;
@@ -30,7 +30,7 @@
 
   .news_wrapper_in_footer{
   position: static;
-  width: 90%;
+  width: 100%;
 
 }
 }

@@ -1,0 +1,129 @@
+.modal_wrapper {
+  height: 120vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.288);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+  position: absolute;
+  top: 250px;
+}
+
+.modal_form {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.modal_heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #db022e;
+  color: white;
+  height: 60px;
+  border-radius: 12px 12px 0 0;
+}
+
+.modal_heading h6 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.modal_para {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+}
+
+.modal_para p {
+  text-align: center;
+}
+
+.modal_para:nth-child(odd) {
+  background-color: #f2e8e4;
+}
+
+.modal_gpa_result h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 60px 30px 80px 30px;
+}
+.gpa_img {
+  height: 142px;
+  width: 124px;
+  transform: scaleX(-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+.gpa_img h2 {
+  transform: scaleX(-1);
+  color: white;
+  font-size: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 0 0 0;
+}
+.back_button button {
+  height: 38px;
+  width: 144px;
+  color: #db022e;
+  border: 1px solid #db022e;
+  background-color: white;
+  margin: 30px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+}
+
+.back_button button:hover {
+  background-color: #db022e;
+  color: white;
+}
+
+/* responsive design  */
+
+@media screen and (max-width: 600px) {
+  .modal_wrapper {
+    height: 100vh;
+    margin-bottom: 20px;
+    top: 650px;
+  }
+
+  .modal_form {
+    width: 80%;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+  }
+
+  .modal_heading h6 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .modal_para {
+    height: 50px;
+  }
+
+  .modal_para p {
+    text-align: center;
+    font-size: 14px;
+  }
+  .back_button button {
+    height: 30px;
+    width: 100px;
+  }
+}

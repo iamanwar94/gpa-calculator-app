@@ -6,14 +6,18 @@ import uper from "./images/uper.png";
 import right from "./images/right.png";
 import circle from "./images/circle.png";
 import s from "./images/s.png";
-import Calc from "./Form/Calc";
+import Form from "./Form/Form";
 import CareerHome from "../CareerAdvisor/CareerHome";
 import HomeText from "./HomeText/HomeText";
 import CoursesHome from "../Courses/CoursesHome";
 import InterviewHome from "../Interview/InterviewHome";
 import BlogHome from "../Blog/BlogHome/BlogHome";
-// import CalcForm from "./Form/CalcForm/CalcForm";
+import ResultModal from "./Form/ResultModal/ResultModal";
+import { useSelector } from "react-redux";
+import { selectGpa } from "../../features/gpaSlice";
 const Home = () => {
+  const gpaClick = useSelector(selectGpa);
+  console.log(gpaClick);
   return (
     <div>
       <div className="home">
@@ -34,9 +38,10 @@ const Home = () => {
         </div>
         <div className="home_header_wrapper">
           <HomeText />
-          <Calc />
+          <Form />
         </div>
       </div>
+      {gpaClick ? <ResultModal /> : ""}
       <CareerHome />
       <CoursesHome />
       <InterviewHome />

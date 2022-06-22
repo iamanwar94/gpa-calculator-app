@@ -1,7 +1,6 @@
 import React from "react";
 import "./Terms.css";
 import terms from "./images/terms.png";
-
 const Terms = () => {
   return (
     <div className="term_wrapper">

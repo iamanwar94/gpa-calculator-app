@@ -5,62 +5,61 @@ import logo from "../images/logo.png";
 
 const ResponsiveNavbar = () => {
   return (
-    <div class="nav">
+    <div className="nav">
       <input type="checkbox" id="nav-check" />
-      <div class="nav-header">
-        <div class="nav-title">
+      <div className="nav-header">
+        <div className="nav-title">
           <Link className="text-decoration-none text-dark" to="/">
             <img src={logo} alt="logo" />
           </Link>
         </div>
       </div>
-      <div class="nav-btn">
-        <label for="nav-check">
+      <div className="nav-btn">
+        <label htmlFor="nav-check">
           <span></span>
           <span></span>
           <span></span>
         </label>
       </div>
-      <div class="nav-links">
+      <div className="nav-links">
         <p>
           <Link className="text-dark" to="/">
             Home
           </Link>
         </p>
         <p>
-          <Link className="text-dark" to="/">
+          <Link className="text-dark" to="/courses">
             Courses
           </Link>
         </p>
         <p>
-          <Link className="text-dark" to="/">
+          <Link className="text-dark" to="/scholarship">
             Scholarship
           </Link>
         </p>
         <p>
-          <Link className="text-dark" to="/">
+          <Link className="text-dark" to="/interviews">
             Interviews
           </Link>
         </p>
         <p>
-          <Link className="text-dark" to="/">
+          <Link className="text-dark" to="/linkedinoptimization">
             Linkedin Optimization
           </Link>
         </p>
         <p>
-          <Link className="text-dark" to="/">
+          <Link className="text-dark" to="/blog">
             Blog
           </Link>
         </p>
         <div className="navbar_button">
-        <a href="tel:">
-          <button className="btn">
-            <i className="fa-solid fa-phone"></i>Schedule a call
-          </button>
-        </a>
+          <a href="tel:">
+            <button className="btn">
+              <i className="fa-solid fa-phone"></i>Schedule a call
+            </button>
+          </a>
+        </div>
       </div>
-      </div>
-     
     </div>
   );
 };
