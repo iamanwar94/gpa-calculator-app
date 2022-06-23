@@ -1,27 +1,198 @@
-.image_para {
+.linkedin_wrapper {
+  width: 100%;
+  background-color: rgb(242, 232, 228);
+  padding: 0px 0 150px 0;
+}
+
+.linkedin_header {
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: fit-content;
+}
+
+.linkedin_header_content {
+  width: 100%;
+  color: white;
+  padding: 60px;
+}
+.linkedin_header_content h1 {
+  width: 70%;
+  font-size: 32px;
+  margin: 15px 0;
+  font-weight: 700;
+}
+.linkedin_header_content p {
+  width: 70%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 40px;
+  margin: 15px 0;
+}
+.linkedin_form_wrapper {
+  width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
-.image_black {
-  position: absolute;
-  z-index: 1;
+.linkedin_form_content {
+  width: 90%;
+  background: white;
+  padding: 50px;
+  margin: 40px;
+  color: #2a2a2a;
+  border-radius: 16px;
+  padding-bottom: 100px;
+}
+.linkedin_form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.linkedin_form h2 {
+  color: #2a2a2a;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 20px 0;
   width: 100%;
 }
-.heading_para {
-  position: absolute;
-  z-index: 2;
+.linkedin_form_inputs {
+  color: #4a4a4a;
+  width: 100%;
 }
-.linkedin_para {
-    line-height: 250%;
+.linkedin_form_inputs .linkedin_form_name {
+  width: 100%;
 }
-.linkedin_form_wrapper{
+.linkedin_form_inputs label {
+  width: 50%;
+  font-size: 24px;
+}
+.linkedin_form_inputs input {
+  width: 50%;
+  font-size: 18px;
+  margin: 15px 0;
+  border: 1px solid #cacaca;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+.linkedin_form_inputs input:focus {
+  outline: 0;
+}
+.linkedin_form_button_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+.linkedin_form_button_wrapper button {
+  width: 144px;
+  height: 38px;
+  color: #db022e;
+  background-color: white;
+  border: 1px solid #db022e;
+  margin: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.linkedin_form_button_wrapper .submit {
+  background-color: #db022e;
+  color: white;
+}
+.linkedin_form_button_wrapper .submit:hover {
+  color: #db022e;
+  background-color: white;
+}
+.linkedin_form_button_wrapper .pay:hover {
+  background-color: #db022e;
+  color: white;
+}
+.linkedin_form_cv {
+  display: flex;
+}
+
+.file_style {
+  height: 48px;
+  width: 333px;
+  border-radius: 8px;
+  border: 1px dashed #db022e;
+  background-color: #ffd6de;
+  color: #2a2a2a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.file_style span {
+  color: #db022e;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+  .linkedin_wrapper {
+    padding: 0px 0 50px 0;
+  }
+
+  .linkedin_header {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+  }
+
+  .linkedin_header_content {
+    width: 100%;
+    color: white;
+    padding: 20px;
+  }
+  .linkedin_header_content h1 {
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+  }
+  .linkedin_header_content p {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .linkedin_form_content {
     width: 90%;
-}
-.input {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+    padding-bottom: 30px;
+  }
+  .linkedin_form {
+    width: 100%;
+  }
+  .linkedin_form h2 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .linkedin_form_inputs label {
+    width: 30%;
+    font-size: 18px;
+    margin: 20px 0;
+    height: 30px;
+  }
+  .linkedin_form_inputs input {
+    width: 70%;
+    font-size: 18px;
+  }
+  .file_style {
+    height: 40px;
+    width: 350%;
+  }
+  .file_style span {
+    color: #db022e;
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }

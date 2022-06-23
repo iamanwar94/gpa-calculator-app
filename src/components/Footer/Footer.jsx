@@ -38,7 +38,7 @@ const Footer = () => {
                 </Link>
               </p>
               <p>
-                <Link to="/" className="text-reset">
+                <Link to="/terms" className="text-reset">
                   Privacy Policy
                 </Link>
               </p>
@@ -53,7 +53,7 @@ const Footer = () => {
                 </Link>
               </p>
               <p>
-                <Link to="/blog" className="text-reset">
+                <Link to="/blogs" className="text-reset">
                   Efficko Blogs
                 </Link>
               </p>
@@ -62,7 +62,7 @@ const Footer = () => {
             <div className="col-md-4 col-lg-2 col-xl-2 mx-auto mb-5 mt-5">
               <h6 className="fw-bold mb-5">Services</h6>
               <p>
-                <Link to="/" className="text-reset">
+                <Link to="/linkedinoptimization" className="text-reset">
                   Linkedin Optimization
                 </Link>
               </p>
@@ -72,7 +72,7 @@ const Footer = () => {
                 </Link>
               </p>
               <p>
-                <Link to="/" className="text-reset">
+                <Link to="/careradvisor" className="text-reset">
                   Career Advisory
                 </Link>
               </p>
@@ -81,32 +81,32 @@ const Footer = () => {
             <div className="col-md-4 col-lg-2 col-xl-2 mx-auto mb-5 mt-5">
               <h6 className="fw-bold mb-5">Resources</h6>
               <p>
-                <Link to="/" className="text-reset">
+                <Link to="/interviews" className="text-reset">
                   Interviews
                 </Link>
               </p>
               <p>
-                <Link to="/" className="text-reset">
+                <Link to="/courses" className="text-reset">
                   Courses
                 </Link>
               </p>
               <p>
-                <Link to="/" className="text-reset">
+                <Link to="/" className="text-reset" htmlFor="form">
                   GPA Calculator
                 </Link>
               </p>
               <p>
-                <Link to="/" className="text-reset">
+                <Link to="/books" className="text-reset">
                   Prep Books
                 </Link>
               </p>
               <p>
-                <Link to="/" className="text-reset">
+                <Link to="/scholarship" className="text-reset">
                   Scholarships
                 </Link>
               </p>
               <p>
-                <Link to="/" className="text-reset">
+                <Link to="/blogs" className="text-reset">
                   Blog
                 </Link>
               </p>

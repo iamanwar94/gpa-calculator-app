@@ -17,7 +17,7 @@ const Form = () => {
   };
 
   return (
-    <div className="gpa_predictor_wrapper">
+    <div className="gpa_predictor_wrapper" id="form">
       <div className="gpa_predictor_heading_wrapper">
         <div className="heading_text heading_border">
           <h1

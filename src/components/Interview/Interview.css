@@ -1,58 +1,202 @@
-.interview_home_wrapper {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
+.interview_wrapper {
+  background-color: rgb(242, 232, 228);
+  padding: 0 0 200px 0;
+}
+.int_header {
+  width: 100%;
+  height: 440px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.interview_home_content_wrapper {
-  width: 90%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.interview_heading_para_wrapper {
-  width: 80%;
-}
-
-.interview_heading_para_wrapper h2 {
-  font-size: 35px;
-  font-weight: 700;
+.int_header_content {
+  background-color: rgba(0, 0, 0, 0.308);
   color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.int_header_content .icon i {
+  font-size: 80px;
+  color: #db022e;
+}
+.int_header_content h1 {
+  width: 70%;
   text-align: center;
+  font-size: 32px;
+  font-weight: 700;
   margin: 20px 0;
 }
-.interview_heading_para_wrapper p {
-  font-size: 18px;
-  color: white;
+.int_header_content p {
+  width: 70%;
   text-align: center;
-  line-height: 30px;
-  margin: 30px 0;
-  font-weight: lighter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.int_header_content button {
+  background-color: #db022e;
+  color: white;
+  width: fit-content;
+  padding: 10px 30px;
+  height: fit-content;
+  border: 0;
+  margin: 20px 0;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.int_header_content button:hover {
+  color: #db022e;
+  background-color: white;
 }
 
-.view_more {
-  margin: 0;
-  padding: 0;
+.int_video_cards_wrapper {
+  width: 100%;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-@media screen and (max-width: 600px) {
-  .interview_home_content_wrapper {
+.int_video_card {
+  background-color: #d9d9d9;
+  height: 244px;
+  width: 48%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.card_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #2a2a2a;
+  width: 50%;
+}
+.card_info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  width: 95%;
+}
+.card_info p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  width: 95%;
+}
+
+.card_info button {
+  padding: 5px 30px;
+  border: 1px solid #db022e;
+  color: #db022e;
+  border-radius: 8px;
+  margin: 40px 0 0 0;
+  font-size: 14px;
+}
+.card_info button:hover {
+  background-color: #db022e;
+  color: white;
+}
+.card_video_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+@media screen and (max-width: 500px) {
+  .int_header {
+    height: 280px;
     width: 100%;
+  }
+  .int_header_content .icon i {
+    font-size: 40px;
+  }
+  .int_header_content h1 {
+    width: 95%;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+  .int_header_content p {
+    width: 95%;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .int_header_content button {
+    padding: 3px 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 12px;
+    height: 30px;
+  }
+  .int_video_cards_wrapper {
+    padding: 30px 0px;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    width: 100%;
   }
-  .interview_heading_para_wrapper h2 {
-    font-size: 24px;
-  }
-  .interview_heading_para_wrapper p {
-    font-size: 16px;
-  }
-  .interview_video_wrapper img {
+
+  .int_video_card {
+    height: fit-content;
     width: 90%;
-    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
   }
-  .interview_video_wrapper{
+
+  .card_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #2a2a2a;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .card_info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+  }
+  .card_info p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card_info button {
+    padding: 5px 30px;
+    border: 1px solid #db022e;
+    color: #db022e;
+    border-radius: 8px;
+    margin: 40px 0 0 0;
+    font-size: 14px;
+  }
+  .card_info button:hover {
+    background-color: #db022e;
+    color: white;
+  }
+  .card_video_wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 50%;
   }
 }

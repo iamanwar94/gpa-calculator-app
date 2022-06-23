@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Interview.css";
+import "./InterviewHome.css";
 import bg from "./images/bg.png";
 import video from "./images/video.png";
 

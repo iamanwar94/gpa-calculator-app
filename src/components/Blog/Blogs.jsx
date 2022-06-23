@@ -1,11 +1,7 @@
 import React from "react";
 import blog from "./images/blogbg.png";
 import smallone from "./images/blogbgsmall1.png";
-// import smalltwo from "./images/blogbgsmall2.png";
 import feature from "./images/blogbgfeature.png";
-// import allart from "./images/bgallarticles.png";
-// import stair from "./images/stair.png";
-// import flower from "./images/flowers.png";
 import stone from "./images/stone.png";
 import Ads from "../Ad/Ads";
 import "./Blogs.css";
@@ -182,119 +178,6 @@ const Blogs = () => {
               {/* second small card ends  */}
             </div>
             {/* cards wrapper ends  */}
-
-            {/* <div className="all_articles_">
-            <h1 className="">All Articles</h1>
-            <div className="line"></div>
-          </div>
-          <div className="all_articles">
-            <div className="all_articles_wrapper w-100">
-              <div
-                className="all_articles_item"
-                style={{
-                  backgroundImage: `url('${allart}')`,
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
-                }}
-              >
-                <div className="article_detail">
-                  <h1 className="article_heading">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing.
-                  </h1>
-                  <p className="article_para">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Tincidunt tellus varius. Tincidunt tellus varius. Tincidunt
-                    tellus varius.
-                  </p>
-                  <div className="article_footer">
-                    <p>Effiko</p>
-                    <p>12-06-2022</p>
-                    <p>
-                      <i className="fa-solid fa-share-nodes"></i>Share
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="all_articles_item"
-                style={{
-                  backgroundImage: `url('${allart}')`,
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
-                }}
-              >
-                <div className="article_detail">
-                  <h1 className="article_heading">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing.
-                  </h1>
-                  <p className="article_para">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Tincidunt tellus varius. Tincidunt tellus varius. Tincidunt
-                    tellus varius.
-                  </p>
-                  <div className="article_footer">
-                    <p>Effiko</p>
-                    <p>12-06-2022</p>
-                    <p>
-                      <i className="fa-solid fa-share-nodes"></i>
-                      Share
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <Ads />
-
-          <div className="all_articles_items_List_wrapper mt-5 d-flex justify-content-between">
-            <div className="all_articles_items_List">
-              <img src={stair} alt="stair" />
-              <button className="btn btn-dark">Category</button>
-              <h1>
-                Category Lorem ipsum dolor sit amet, consectetur adipiscing.
-              </h1>
-              <div className="article_footer d-flex justify-content-around w-100">
-                <p>Effiko</p>
-                <p>12-06-2022</p>
-                <p>
-                  <i className="fa-solid fa-share-nodes"></i>
-                  Share
-                </p>
-              </div>
-            </div>
-            <div className="all_articles_items_List">
-              <img src={stone} alt="stair" />
-              <button className="btn btn-dark">Category</button>
-              <h1>
-                Category Lorem ipsum dolor sit amet, consectetur adipiscing.
-              </h1>
-              <div className="article_footer d-flex justify-content-around w-100">
-                <p>Effiko</p>
-                <p>12-06-2022</p>
-                <p>
-                  <i className="fa-solid fa-share-nodes"></i>
-                  Share
-                </p>
-              </div>
-            </div>
-            <div className="all_articles_items_List">
-              <img src={flower} alt="stair" />
-              <button className="btn btn-dark">Category</button>
-              <h1>
-                Category Lorem ipsum dolor sit amet, consectetur adipiscing.
-              </h1>
-              <div className="article_footer d-flex justify-content-around w-100">
-                <p>Effiko</p>
-                <p>12-06-2022</p>
-                <p>
-                  <i className="fa-solid fa-share-nodes"></i>
-                  Share
-                </p>
-              </div>
-            </div>
-          */}
           </div>
         </div>
         <div className="blog_latest_articles_line">
@@ -330,38 +213,36 @@ const Blogs = () => {
             </div>
           </div>
           {/* first small card ends  */}
-          <div className="latest_articles_small_cards_wrapper">
-            <div
-              className="all_articles_card"
-              style={{
-                backgroundImage: `url('${stone}')`,
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-            >
-              <div className="article_detail">
-                <div className="article_deatil_heading_para_wrapper">
-                  <h1>Lorem ipsum dolor sit amet, consectetur adipiscing.</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Tincidunt tellus varius. Tincidunt tellus varius. Tincidunt
-                    tellus varius.
-                  </p>
-                </div>
-                <div className="article_footer">
-                  <p>Effiko</p>
-                  <p>12-06-2022</p>
-                  <p>
-                    <i className="fa-solid fa-share-nodes"></i>Share
-                  </p>
-                </div>
+          <div
+            className="all_articles_card"
+            style={{
+              backgroundImage: `url('${stone}')`,
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          >
+            <div className="article_detail">
+              <div className="article_deatil_heading_para_wrapper">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing.</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Tincidunt tellus varius. Tincidunt tellus varius. Tincidunt
+                  tellus varius.
+                </p>
+              </div>
+              <div className="article_footer">
+                <p>Effiko</p>
+                <p>12-06-2022</p>
+                <p>
+                  <i className="fa-solid fa-share-nodes"></i>Share
+                </p>
               </div>
             </div>
-            {/* second small card ends  */}
           </div>
-          {/* all articles cards ends here  */}
+          {/* second card ends here  */}
         </div>
+        {/* all artiles cards wrapper ends  */}
         <div className="blogs_ads">
           <Ads />
         </div>
