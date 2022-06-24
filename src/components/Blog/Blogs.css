@@ -10,6 +10,7 @@
   justify-content: space-around;
   align-items: flex-start;
   flex-direction: column;
+  height: 450px;
 }
 .blog_header_content_wrapper {
   height: 100%;
@@ -310,4 +311,212 @@
 .common_card .article_footer {
   width: 100%;
   justify-content: space-around;
+}
+
+/* MEDIA QURIES STARTS HERE  */
+
+@media screen and (max-width: 500px) {
+
+  .blogs_wrapper {
+    padding-bottom: 10px;
+  }
+  .blogs_header_wrapper {
+    height: 300px;
+    width: 100%;
+  }
+  .blog_header_content_wrapper {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  .blogs_search_wrapper input {
+    height: 40px;
+    width: 90%;
+    border-radius: 8px;
+    padding: 0 50px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 0;
+    background: #ffffff;
+    box-shadow: 4px 4px 60px rgba(42, 42, 42, 0.25);
+  }
+  .blogs_search_wrapper i {
+    position: absolute;
+    left: 15px;
+    color: #a6a6a6;
+    font-size: 24px;
+  }
+
+  .blog_feature_wrapper {
+    width: 90%;
+    padding: 20px;
+    color: #2a2a2a;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
+
+  .blog_feature_heading_para h6 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .blog_feature_heading_para h1 {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .blog_feature_heading_para p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 10px 0;
+    width: 100%;
+  }
+  .blog_feature_heading_para button {
+    font-size: 12px;
+    width: 100px;
+    height: 30px;
+    margin: auto;
+  }
+
+  /* header css ends here  */
+
+  .blog_items_wrapper {
+    margin-top: 200px;
+  }
+  .blog_cat_heading_wrapper h1 {
+    font-size: 20px;
+  }
+  .blog_cat_heading_wrapper h1:hover {
+    font-size: 21px;
+  }
+  .blog_latest_articles_line h1 {
+    font-size: 18px;
+  }
+
+  /* cards styling starts from here  */
+
+  .latest_articles_cards_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 750px;
+  }
+
+  .latest_articles_large_card_wrapper {
+    height: 35%;
+    margin: auto;
+  }
+  .article_detail {
+    width: 80%;
+    height: 67%;
+    padding: 10px;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  .article_detail h1 {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 10px 0;
+  }
+  .article_detail p {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+  .latest_articles_small_cards_wrapper {
+    justify-content: center;
+    height: 65%;
+    margin-top: 20px;
+  }
+  .small_card {
+    height: 230px;
+    width: 100%;
+  }
+
+  .small_card .article_detail {
+    width: 80%;
+    padding-top: 10px;
+  }
+  .small_card .article_detail h1 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .small_card .article_detail p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .all_articles_cards_wrapper {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .all_articles_card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+
+  .all_articles_card .article_detail h1 {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+  .all_articles_card .article_detail p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .all_articles_common_cards_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .common_card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .common_card img {
+    width: 90%;
+    height: auto;
+    margin: 10px 0;
+  }
+  .common_card button {
+    height: auto;
+    width: auto;
+    font-size: 14px;
+    padding: 10px 30px;
+  }
+  .common_card h3 {
+    font-size: 18px;
+    line-height: 18px;
+    width: 80%;
+  }
+
+  .common_card .article_footer {
+    width: 100%;
+    justify-content: space-around;
+  }
 }

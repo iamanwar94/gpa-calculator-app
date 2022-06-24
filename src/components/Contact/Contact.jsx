@@ -5,8 +5,11 @@ import triangle from "./images/triangle.png";
 import "./Contact.css";
 import Map from "./Map";
 import ContactAddressAndForm from "./ContactAddressAndForm";
+import { useSelector } from "react-redux";
+import { selectFolderStatus } from "../../features/folderSlice";
 
 const Contact = () => {
+  const status = useSelector(selectFolderStatus);
   return (
     <div className="contact_wrapper">
       {/* header  */}
@@ -38,6 +41,11 @@ const Contact = () => {
       <div className="contact_map_wrapper">
         <div className="contact_map_component">
           <Map />
+        </div>
+        <div
+          className="contact_form_component"
+          style={!status ? { left: "-1110px" } : { left: "0" }}
+        >
           <ContactAddressAndForm />
         </div>
       </div>

@@ -1,26 +1,145 @@
-.advisor_image_para_btn {
-  height: 450px;
+.advisors_wrapper {
   width: 100%;
+  padding: 0 0 200px 0;
+}
+.advisors_header_wrapper {
+  width: 100%;
+  height: 420px;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+}
+.advisors_heading_para_wrapper {
+  height: 100%;
+  width: 60%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  justify-content: flex-end;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  color: white;
+  flex-direction: column;
 }
-.black_img {
-  height: 450px;
-  position: absolute;
-  z-index: 1;
-  width: 50%;
+
+.advisors_heading_para_wrapper h3 {
+  font-size: 36px;
+  font-weight: 700;
+  width: 60%;
 }
-.advisor_detail {
-  position: relative;
-  z-index: 50;
-  padding: 0 300px 0 0;
-  /* display: flex;
-   align-items: flex-start;
-   flex-direction: column; */
+.advisors_heading_para_wrapper p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  width: 60%;
+  margin: 20px 0;
 }
+.advisors_heading_para_wrapper .header_btn {
+  display: flex;
+  justify-content: flex-start;
+  width: 60%;
+}
+.header_btn button {
+  margin: 0 20px;
+  height: 44px;
+  padding: 0 24px;
+  color: #db022e;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 0;
+}
+.header_btn button i {
+  margin-right: 10px;
+}
+.header_btn button:hover {
+  background-color: #db022e;
+  color: white;
+}
+button.linked {
+  background-color: #1e4084;
+  color: white;
+}
+button.linked:hover {
+  color: #1e4084;
+  background-color: white;
+}
+
+.advisors_card_wrapper {
+  margin-top: 30px;
+}
+.advisors_card_heading_wrapper {
+  margin: 20px 0;
+}
+.advisors_card_heading_wrapper h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #2a2a2a;
+}
+.linked_card_components_wrapper {
+  border: 1px solid #4a4a4a77;
+  border-radius: 8px;
+  padding: 30px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.advisors_card {
+  width: 240px;
+  margin: 10px;
+}
+.advisors_card_image_wrapper {
+  width: 100%;
+  height: 156px;
+  border-radius: 8px;
+}
+.advisors_card_image_wrapper img {
+  width: 100%;
+  height: 156px;
+  border-radius: 8px;
+}
+.advisors_card_content_wrapper {
+  width: 100%;
+  padding: 10px;
+}
+
+.advisors_card_content_wrapper h5 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.advisors_card_content_wrapper p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.card_btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.card_btn button {
+  width: 45%;
+  border: 0;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 8px;
+  color: white;
+  height: 30px;
+  background-color: white;
+  border: 1px solid #db022e;
+  color: #db022e;
+  padding: 0 6px;
+}
+.card_btn button.linked {
+  border: 1px solid #1e4084;
+  color: #1e4084;
+  padding: 0 6px;
+}
+
+/* home styling  */
+
 .career_home {
   background-color: rgb(242, 232, 228);
   height: 220vh;
@@ -148,6 +267,57 @@
 }
 
 @media screen and (max-width: 600px) {
+  .advisors_wrapper {
+    padding: 0 0 50px 0;
+  }
+  .advisors_header_wrapper {
+    width: 100%;
+    height: 320px;
+  }
+  .advisors_heading_para_wrapper {
+    width: 100%;
+  }
+
+  .advisors_heading_para_wrapper h3 {
+    font-size: 24px;
+    font-weight: 700;
+    width: 90%;
+    text-align: center;
+  }
+  .advisors_heading_para_wrapper p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    width: 90%;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .advisors_heading_para_wrapper .header_btn {
+    width: 90%;
+  }
+  .header_btn button {
+    margin: 0 20px;
+    height: 36px;
+    padding: 0 18px;
+    color: #db022e;
+    font-size: 12px;
+    font-weight: 400;
+    margin: auto;
+  }
+
+  .advisors_card_heading_wrapper h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2a2a2a;
+    text-align: center;
+  }
+  .header_btn button.linked {
+    background-color: #1e4084;
+    color: white;
+  }
+
+  /* HOME STYLING  */
+
   .career_home {
     display: flex;
     justify-content: space-around;
@@ -216,7 +386,7 @@
     flex-direction: column;
     padding: 5px;
   }
-  .card_none{
+  .card_none {
     display: none;
   }
   .career_card h4 {

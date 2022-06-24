@@ -1,27 +1,21 @@
 import React from "react";
-import ResponsiveNavbar from "../Navbar/ReponsiveNavbar/ResponsiveNavbar";
 import "./About.css";
 import aboutgirl from "./aboutgirl.png";
-// import effiko from "./effiko.png";
+import effiko from "./effiko.png";
 import logo from "./logo.png";
 
 const About = () => {
   return (
     <div className="about_wrapper">
-      <ResponsiveNavbar />
       <div className="about_header_wrapper">
-        <div className="about_header container">
-          <div
-            className="about_img w-100"
-            style={{
-              backgroundImage: `url('${aboutgirl}')`,
-              height: "540px",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          >
-            {/* <img src={effiko} alt="effiko" /> */}
+        <div
+          className="about_header container"
+          style={{
+            backgroundImage: `url('${aboutgirl}')`,
+          }}
+        >
+          <div className="about_header_content">
+            <img src={effiko} alt="effiko" />
             <h1>EFFIKO</h1>
             <h1>WEBSITE</h1>
             <p>
@@ -72,7 +66,7 @@ const About = () => {
             <p>Lorem ipsum dolor sit.</p>
             <p>Lorem ipsum dolor sit.</p>
           </div>
-          <div className="about_footer_content">
+          <div className="about_footer_content last">
             <h1>
               <i className="fa-solid fa-circle small"></i>About us
             </h1>

@@ -1,46 +1,50 @@
 import React from "react";
-import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { selectFolderStatus } from "../../features/folderSlice";
+import { folded, unFolded } from "../../features/folderSlice";
 
 const ContactAddressAndForm = () => {
-  const [folded, setFolded] = useState(false);
+  const status = useSelector(selectFolderStatus);
+  const dispatch = useDispatch();
   const clickHandler = () => {
-    folded ? setFolded(false) : setFolded(true);
+    !status ? dispatch(folded()) : dispatch(unFolded());
   };
   return (
     <div className="contact_address_signup_wrapper">
-      <div className="contact_address_form">
-        <div className="contact_address_text">
-          <div className="f-address">
-            <h3>United Arab Emirates</h3>
-            <p>
-              C/o Tochukwu Nkwocha Second Floor, CNN Building Dubai Media City,
-              Dubai.
-            </p>
-            <p>
-              <a href="mailto:hello@effikos.com">hello@effikos.com</a>
-            </p>
+      <div className="address_and_contact_wrapper">
+        <div className="contact_address_form">
+          <div className="contact_address_text">
+            <div className="f-address">
+              <h3>United Arab Emirates</h3>
+              <p>
+                C/o Tochukwu Nkwocha Second Floor, CNN Building Dubai Media
+                City, Dubai.
+              </p>
+              <p>
+                <a href="mailto:hello@effikos.com">hello@effikos.com</a>
+              </p>
+            </div>
+            {/* first address div ends here  */}
+            <div className="s-address">
+              <h3>Nigeria</h3>
+              <p>
+                Spreadit Limited 5 Olutosin Ajayi Street Ajao Estate, Lagos.
+              </p>
+              <p>
+                <a href="mailto:hello@effikos.com">hello@effikos.com</a>
+              </p>
+            </div>
+            {/* second address div ends  */}
+            <div className="address_icons">
+              <i className="fa-brands fa-facebook"></i>
+              <i className="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-twitter"></i>
+              <i className="fa-brands fa-youtube"></i>
+            </div>
+            {/* icons ends  */}
           </div>
-          {/* first address div ends here  */}
-          <div className="s-address">
-            <h3>Nigeria</h3>
-            <p>Spreadit Limited 5 Olutosin Ajayi Street Ajao Estate, Lagos.</p>
-            <p>
-              <a href="mailto:hello@effikos.com">hello@effikos.com</a>
-            </p>
-          </div>
-          {/* second address div ends  */}
-          <div className="address_icons">
-            <i className="fa-brands fa-facebook"></i>
-            <i className="fa-brands fa-instagram"></i>
-            <i className="fa-brands fa-twitter"></i>
-            <i className="fa-brands fa-youtube"></i>
-          </div>
-          {/* icons ends  */}
+          <div className="contact_address_black"></div>
         </div>
-        {/* address text ends here  */}
-        {/* address div dark black  */}
-        <div className="contact_address_black"></div>
-        {/* address div dark black ends */}
         <div className="contact_form_wrapper">
           <div className="input_form">
             <h1>Send Us a Message</h1>
@@ -74,7 +78,7 @@ const ContactAddressAndForm = () => {
           <div className="input_form_dark_red" onClick={clickHandler}>
             <i
               className={
-                folded
+                !status
                   ? "fa-solid fa-circle-chevron-right"
                   : "fa-solid fa-circle-chevron-left"
               }
@@ -84,7 +88,6 @@ const ContactAddressAndForm = () => {
           {/* input form ends here  */}
         </div>
       </div>
-      {/* contact address and form ends here  */}
     </div>
   );
 };

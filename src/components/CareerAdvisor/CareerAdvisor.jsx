@@ -4,10 +4,30 @@ import "./Career.css";
 import advisor from "./images/advisor.png";
 import black from "./images/black.png";
 import CareerAdviosrItems from "./CareerAdvisorItems";
+import Ads from "../Ad/Ads";
 
 const CareerAdvisor = () => {
   const [advisors, setAdvisors] = useState([]);
   const [loading, setLoading] = useState(true);
+  const Card = () => {
+    return (
+      <div className="courses_card_items_wrapper">
+        {loading ? (
+          <h1 className="loader text-center">Loading...</h1>
+        ) : (
+          advisors
+            .slice(0, 4)
+            .map((book) => (
+              <CareerAdviosrItems
+                key={book.id}
+                title={book.title}
+                image={book.cover_image}
+              />
+            ))
+        )}
+      </div>
+    );
+  };
 
   useEffect(() => {
     async function getAdvisors() {
@@ -28,53 +48,44 @@ const CareerAdvisor = () => {
   return (
     <div className="advisors_wrapper">
       <div
-        className="advisor_image_para_btn d-flex"
-        style={{ backgroundImage: `url('${advisor}')` }}
+        className="advisors_header_wrapper"
+        style={{
+          backgroundImage: `url('${advisor}')`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
       >
-        <img src={black} alt="black" className="w-50 black_img" />
-        <div className="advisor_detail w-50">
-          <h1 className="text-white">Ahmed Ali</h1>
-          <p className="text-white">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-            nesciunt dolorum sunt vero quos est delectus, similique autem
-            necessitatibus cumque quia sequi quidem, quisquam voluptatem
-            consequatur voluptate fugiat? Iusto modi ipsum incidunt consequatur
-            molestiae sunt labore, dolor, qui consectetur, asperiores esse
-            debitis. Accusamus consequatur nisi maiores aperiam beatae? Eaque,
-            voluptate!
+        <div
+          className="advisors_heading_para_wrapper"
+          style={{
+            backgroundImage: `url('${black}')`,
+          }}
+        >
+          <h3>Ahmed Ali</h3>
+          <p className="">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et amet
+            amet consectetur id malesuada interdum. Egestas commodo eu sapien
+            lobortis. Habitasse imperdiet ipsum adipiscing feugiat. Pretium
+            aliquet massa augue cras.
           </p>
-          <div className="advisor_btn d-flex justify-content-between">
-            <button type="button" class="btn btn-white btn-lg">
-              <i className="fa-solid fa-phone"></i>
-              Schedule a Call
+          <div className="header_btn">
+            <button className="">
+              <i className="fa-solid fa-phone"></i>Schedule a Call
             </button>
-            <button type="button" class="btn btn-primary btn-lg">
-              <i className="fa-brands fa-linkedin"></i>
-              Linkedin
+            <button className="linked">
+              <i className="fa-brands fa-linkedin"></i>Linked In
             </button>
           </div>
         </div>
       </div>
-      <div className="container h-100 mt-5">
-        <h1 className=""> Career Advisors</h1>
-        <div className="">
-          <div className="advisor-card-wrapper row rounded">
-            {loading ? (
-              <h1 className="mb-5 mt-5 mx-auto text-center text-danger">
-                Loading...
-              </h1>
-            ) : (
-              advisors.map((book) => (
-                <div className="col-md-3 mb-5 mt-5 mx-auto">
-                  <CareerAdviosrItems
-                    id={advisors.id}
-                    title={advisors.title}
-                    image={advisors.cover_image}
-                  />
-                </div>
-              ))
-            )}
-          </div>
+      <div className="advisors_card_wrapper container">
+        <div className="advisors_card_heading_wrapper">
+          <h2>Career Advisors</h2>
+        </div>
+        <div className="linked_card_components_wrapper">
+          <Card />
+          <Ads />
+          <Card />
         </div>
       </div>
     </div>
