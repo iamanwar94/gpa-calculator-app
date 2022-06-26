@@ -26,12 +26,12 @@ const App = () => {
         <Route path="/interviews" element={<Interviews />} />
         <Route path="/linkedinoptimization" element={<Linkedin />} />
         <Route path="/blog" element={<Blogs />} />
+        <Route path="/blog/:id" element={<BlogItem />} />
         <Route path="/careerhome" element={<CareerAdvisor />} />
         <Route path="/about" element={<About />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/modal" element={<ResultModal />} />
-        <Route path="/blogitem" element={<BlogItem />} />
         <Route path="/books" element={<Books />} />
       </Routes>
       <Footer />

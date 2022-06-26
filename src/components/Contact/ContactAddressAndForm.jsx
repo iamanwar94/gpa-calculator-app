@@ -50,11 +50,11 @@ const ContactAddressAndForm = () => {
             <h1>Send Us a Message</h1>
             <div className="inputs_wrapper">
               <div className="input_name_email_wrapper">
-                <div className="input_name">
+                <div className="input_name input_relative">
                   <label htmlFor="name">Name</label>
                   <input type="text" id="name" placeholder="Full Name" />
                 </div>
-                <div className="input_email">
+                <div className="input_email input_relative">
                   <label htmlFor="email">Email</label>
                   <input type="email" id="email" placeholder="Email" />
                 </div>
@@ -65,8 +65,6 @@ const ContactAddressAndForm = () => {
                 <textarea
                   name="message"
                   id="message"
-                  cols="30"
-                  rows="4"
                   placeholder="Message here..."
                 ></textarea>
               </div>

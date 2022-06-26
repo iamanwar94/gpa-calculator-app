@@ -44,7 +44,7 @@ const Contact = () => {
         </div>
         <div
           className="contact_form_component"
-          style={!status ? { left: "-1110px" } : { left: "0" }}
+          style={!status ? { left: "-1132px" } : { left: "0" }}
         >
           <ContactAddressAndForm />
         </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { clickTrue } from "../../../../features/gpaSlice";
+import { showResult } from "../../../../features/GpaResultSlice";
 import { useDispatch } from "react-redux";
 import "./GpaForm.css";
 
@@ -51,23 +52,18 @@ const GpaForm = () => {
     setCourses(newCourses);
   };
   const submitHandler = () => {
-    const points = courses.map(
+       const points = courses.map(
       (course) => gradesToPoints[course.grade.toLowerCase()]
     );
-    console.log(points);
     const creditHours = courses.map((course) => Number(course.creditHours));
-    console.log(creditHours);
     const pointsXcreditHours = points.map((point, i) => point * creditHours[i]);
-    console.log(pointsXcreditHours);
     const result = pointsXcreditHours.reduce((prev, curr) => prev + curr);
-    console.log(result);
     const totalCreditHours = creditHours.reduce((prev, curr) => prev + curr);
-    console.log(totalCreditHours);
     const gpa = (result / totalCreditHours).toFixed(1);
-    console.log(gpa);
     setGpa(gpa);
     setCourses([courseFields(), courseFields(), courseFields()]);
     dispatch(clickTrue());
+    dispatch(showResult(courses))
   };
   const clearSubmitHandler = () => {
     setCourses([courseFields(), courseFields(), courseFields()]);

@@ -1,13 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import home from "./images/careerhome.png";
-import img1 from "./images/img1.png";
-import img3 from "./images/img3.png";
-import img4 from "./images/img4.png";
-import img2 from "./images/img2.png";
 import { Link } from "react-router-dom";
 import Ad from "../Ad/Ads";
+import axios from "axios";
 
 const CareerHome = () => {
+  const [advisors, setAdvisors] = useState([]);
+
+  const baseURL = "https://effiko-api.herokuapp.com/";
+  const image = "uploads/";
+  useEffect(() => {
+    async function getAdvisors() {
+      try {
+        const response = await axios.get(`${baseURL}api/advisors`);
+        setAdvisors(response.data.advisors);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    getAdvisors();
+  }, []);
+  const Card = () => {
+    return advisors.slice(0, 2).map((advisor) => (
+      <div className="career_card" key={advisor._id}>
+        <img src={baseURL + image + advisor.image} alt={advisor.name} />
+        <h4 className="">{advisor.name}</h4>
+        <p className="">{advisor.description}</p>
+        <button className="">
+          <a href={"tel:" + advisor.phone_no}> Schedule a Call</a>
+        </button>
+      </div>
+    ));
+  };
+  const CardNone = () => {
+    return advisors.slice(2, 4).map((advisor) => (
+      <div className="career_card card_none" key={advisor._id}>
+        <img src={baseURL + image + advisor.image} alt={advisor.name} />
+        <h4 className="">{advisor.name}</h4>
+        <p className="">{advisor.description}</p>
+        <button className="">
+          <a href={"tel:" + advisor.phone_no}> Schedule a Call</a>
+        </button>
+      </div>
+    ));
+  };
   return (
     <div className="career_home">
       <div className="career_home_top">
@@ -32,42 +68,8 @@ const CareerHome = () => {
       <div className="container career_home_advisors">
         <h1 className="">Our Career Advisors</h1>
         <div className="career_card_wrapper">
-          <div className="career_card">
-            <img src={img1} alt="img1" />
-            <h4 className="">Ahmed</h4>
-            <p className="">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-              excepturi facere est iure dicta vitae?
-            </p>
-            <button className="">Schedule a Call</button>
-          </div>
-          <div className="career_card card_none">
-            <img src={img2} alt="img1" />
-            <h4 className="">Ahmed</h4>
-            <p className="">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-              excepturi facere est iure dicta vitae?
-            </p>
-            <button className="">Schedule a Call</button>
-          </div>
-          <div className="career_card">
-            <img src={img3} alt="img1" />
-            <h4 className="">Ahmed</h4>
-            <p className="">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-              excepturi facere est iure dicta vitae?
-            </p>
-            <button className="">Schedule a Call</button>
-          </div>
-          <div className="career_card card_none">
-            <img src={img4} alt="img1" />
-            <h4 className="">Ahmed</h4>
-            <p className="">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-              excepturi facere est iure dicta vitae?
-            </p>
-            <button className="">Schedule a Call</button>
-          </div>
+          <Card />
+          <CardNone />
         </div>
         <h2 className="view_more mt-3 mb-3">
           <Link to="/careerhome" className="text-decoration-none">

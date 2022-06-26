@@ -9,6 +9,10 @@ import Ads from "../Ad/Ads";
 const CareerAdvisor = () => {
   const [advisors, setAdvisors] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const baseURL = "https://effiko-api.herokuapp.com/";
+  const image = "uploads/";
+
   const Card = () => {
     return (
       <div className="courses_card_items_wrapper">
@@ -17,11 +21,34 @@ const CareerAdvisor = () => {
         ) : (
           advisors
             .slice(0, 4)
-            .map((book) => (
+            .map((advisor) => (
               <CareerAdviosrItems
-                key={book.id}
-                title={book.title}
-                image={book.cover_image}
+                key={advisor._id}
+                title={advisor.name.slice(0, 20)}
+                image={baseURL + image + advisor.image}
+                phone={"tel:" + advisor.phone_no}
+                linked={advisor.linkedin_url}
+              />
+            ))
+        )}
+      </div>
+    );
+  };
+  const Card2 = () => {
+    return (
+      <div className="courses_card_items_wrapper">
+        {loading ? (
+          <h1 className="loader text-center">Loading...</h1>
+        ) : (
+          advisors
+            .slice(4)
+            .map((advisor) => (
+              <CareerAdviosrItems
+                key={advisor._id}
+                title={advisor.name.slice(0, 20)}
+                image={baseURL + image + advisor.image}
+                phone={"tel:" + advisor.phone_no}
+                linked={advisor.linkedin_url}
               />
             ))
         )}
@@ -32,11 +59,8 @@ const CareerAdvisor = () => {
   useEffect(() => {
     async function getAdvisors() {
       try {
-        const response = await axios.get(
-          "https://my-json-server.typicode.com/dmitrijt9/book-api-mock/books"
-        );
-        console.log(response.data);
-        setAdvisors(response.data);
+        const response = await axios.get(`${baseURL}api/advisors`);
+        setAdvisors(response.data.advisors);
         setLoading(false);
       } catch (error) {
         console.error(error);
@@ -85,7 +109,7 @@ const CareerAdvisor = () => {
         <div className="linked_card_components_wrapper">
           <Card />
           <Ads />
-          <Card />
+          <Card2 />
         </div>
       </div>
     </div>

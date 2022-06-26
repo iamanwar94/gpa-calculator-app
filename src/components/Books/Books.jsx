@@ -1,19 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Ads from "../Ad/Ads";
 import "./Books.css";
 import book from "./images/book.jpeg";
-import cover from "./images/book-cover.png";
+import axios from "axios";
 
 const Books = () => {
-  const Card = () => {
+  const [books, setBooks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredBooks, setFilteredBooks] = useState([]);
+  const baseUrl = "https://effiko-api.herokuapp.com";
+  const image = "/uploads/";
+  useEffect(() => {
+    async function getBooks() {
+      try {
+        const response = await axios.get(`${baseUrl}/api/books`);
+        console.log(response.data.books);
+        setBooks(response.data.books);
+        setLoading(false);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    getBooks();
+  }, []);
+  useEffect(() => {
+    const filteredData = books?.filter((book) =>
+      book.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+    );
+    setFilteredBooks(filteredData);
+  }, [books, searchTerm]);
+  const Card = ({ book }) => {
     return (
       <div className="books_card_item">
         <div className="book_img">
-          <img src={cover} alt="book" />
+          <img src={baseUrl + image + book.image} alt={book.title} />
         </div>
         <div className="book_card_info">
-          <h4>Book Name</h4>
-          <p>Author name</p>
+          <h4> {book.title.slice(0, 10)}... </h4>
+          <p> {book.author.slice(0, 20)}... </p>
         </div>
       </div>
     );
@@ -30,7 +55,11 @@ const Books = () => {
             aliquet massa augue cras.
           </p>
           <div className="books_header_content_search">
-            <input type="text" placeholder="Search for Books" />
+            <input
+              type="text"
+              placeholder="Search for Books"
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
             <button>Search</button>
           </div>
         </div>
@@ -43,16 +72,15 @@ const Books = () => {
         <div className="books_card_wrapper_heading">
           <h3>Prep Books Lists</h3>
         </div>
-        <div className="books_cards">
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-        </div>
+        {loading ? (
+          <h1>Loading...</h1>
+        ) : (
+          <div className="books_cards">
+            {(filteredBooks ? filteredBooks : books).map((book) => (
+              <Card key={book._id} book={book} />
+            ))}
+          </div>
+        )}
         <div className="books_ads">
           <Ads />
         </div>

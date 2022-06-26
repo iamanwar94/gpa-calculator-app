@@ -7,21 +7,44 @@ import CourseItems from "./CourseItems";
 import Ad from "../Ad/Ads";
 
 const Courses = () => {
-  const [books, setBooks] = useState([]);
+  const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const baseURL = "https://effiko-api.herokuapp.com";
+  const image = "/uploads/";
+
   const Card = () => {
     return (
       <div className="courses_card_items_wrapper">
         {loading ? (
           <h1 className="loader text-center">Loading...</h1>
         ) : (
-          books
+          courses
             .slice(0, 4)
-            .map((book) => (
+            .map((course) => (
               <CourseItems
-                key={book.id}
-                title={book.title}
-                image={book.cover_image}
+                key={course._id}
+                title={course.title.slice(0, 18)}
+                image={baseURL + image + course.image}
+              />
+            ))
+        )}
+      </div>
+    );
+  };
+  const Card2 = () => {
+    return (
+      <div className="courses_card_items_wrapper">
+        {loading ? (
+          <h1 className="loader text-center">Loading...</h1>
+        ) : (
+          courses
+            .slice(4)
+            .map((course) => (
+              <CourseItems
+                key={course._id}
+                title={course.title.slice(0, 18)}
+                image={baseURL + image + course.image}
               />
             ))
         )}
@@ -30,19 +53,16 @@ const Courses = () => {
   };
 
   useEffect(() => {
-    async function getBooks() {
+    async function getCourses() {
       try {
-        const response = await axios.get(
-          "https://my-json-server.typicode.com/dmitrijt9/book-api-mock/books"
-        );
-        console.log(response.data);
-        setBooks(response.data);
+        const response = await axios.get(`${baseURL}/api/courses`);
+        setCourses(response.data.courses);
         setLoading(false);
       } catch (error) {
         console.error(error);
       }
     }
-    getBooks();
+    getCourses();
   }, []);
 
   return (
@@ -79,7 +99,7 @@ const Courses = () => {
         <div className="card_components_wrapper">
           <Card />
           <Ad />
-          <Card />
+          <Card2 />
         </div>
       </div>
     </div>

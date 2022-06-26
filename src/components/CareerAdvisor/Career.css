@@ -2,6 +2,24 @@
   width: 100%;
   padding: 0 0 200px 0;
 }
+.call a {
+  color: #db022e;
+}
+.call a:hover {
+  color: #db022e;
+}
+.career_card a {
+  color: #db022e;
+}
+.career_card a:hover {
+  color: white;
+}
+.linked a {
+  color: #1e4084;
+}
+.linked a:hover {
+  color: #1e4084;
+}
 .advisors_header_wrapper {
   width: 100%;
   height: 420px;
@@ -88,6 +106,8 @@ button.linked:hover {
 .advisors_card {
   width: 240px;
   margin: 10px;
+  box-shadow: 0 0 10px rgba(143, 142, 142, 0.6);
+  border-radius: 8px;
 }
 .advisors_card_image_wrapper {
   width: 100%;
@@ -222,6 +242,13 @@ button.linked:hover {
   flex-direction: column;
   padding: 10px;
 }
+.career_card img {
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
+  border: 2px solid #db022e;
+}
+
 .career_card h4,
 .career_card p {
   text-align: center;

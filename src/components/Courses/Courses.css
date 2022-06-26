@@ -1,6 +1,7 @@
 .courses_wrapper {
   width: 100%;
   background-color: rgb(242, 232, 228);
+  padding: 0 0 120px 0;
 }
 
 .courses_header_wrapper {
@@ -96,6 +97,9 @@
   display: flex;
   flex-direction: column;
   margin: 20px 0;
+  box-shadow: 0 0 10px rgb(124, 124, 124);
+  border-radius: 8px;
+  justify-content: space-between;
 }
 
 .courses_card_image_wrapper img {
@@ -107,6 +111,8 @@
 .courses_card_content_wrapper {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
 
 .courses_card_content_wrapper h5 {

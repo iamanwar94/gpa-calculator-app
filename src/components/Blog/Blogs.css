@@ -172,7 +172,7 @@
 .article_detail {
   width: 80%;
   height: 50%;
-  background: rgba(255, 255, 255, 0.507);
+  background: rgba(233, 230, 230, 0.527);
   color: #2a2a2a;
   border-radius: 8px 8px 0 0;
   padding: 20px;
@@ -251,6 +251,7 @@
   align-items: flex-end;
   width: 530px;
   border-radius: 8px;
+  height: 380px;
 }
 
 .all_articles_card .article_detail h1 {
@@ -268,8 +269,9 @@
 .all_articles_common_cards_wrapper {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .common_card {
   width: 30%;
@@ -277,12 +279,14 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  margin: 20px 18px;
 }
 
 .common_card img {
   width: 320px;
   height: 300px;
   margin: 10px 0;
+  border-radius: 8px;
 }
 .common_card button {
   height: 58px;
@@ -390,10 +394,10 @@
     margin-top: 200px;
   }
   .blog_cat_heading_wrapper h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .blog_cat_heading_wrapper h1:hover {
-    font-size: 21px;
+    font-size: 19px;
   }
   .blog_latest_articles_line h1 {
     font-size: 18px;

@@ -2,13 +2,16 @@ import React from "react";
 import "./ResultModal.css";
 import ellipse from "./images/Ellipse.png";
 import { clickFalse } from "../../../../features/gpaSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { selectGpaResult } from "../../../../features/GpaResultSlice";
 
 const ResultModal = () => {
   const dispatch = useDispatch();
-  const clickHandler = () =>{
-    dispatch(clickFalse())
-  }
+  const gpaResult = useSelector(selectGpaResult);
+  const clickHandler = () => {
+    dispatch(clickFalse());
+    console.log(gpaResult);
+  };
   return (
     <div className="modal_wrapper">
       <div className="modal_form">
@@ -19,13 +22,16 @@ const ResultModal = () => {
             <h6>Credit Hours</h6>
             <h6>Points</h6>
           </div>
-          <div className="modal_para_1 modal_para">
-            <p>1</p>
-            <p>Course Name</p>
-            <p>2</p>
-            <p>A</p>
-          </div>
-          <div className="modal_para_2 modal_para">
+          {gpaResult[0].map((result,i) => (
+            <div className="modal_para_1 modal_para" key={i}>
+              <p>{i+1}</p>
+              <p> {result.course}</p>
+              <p> {result.creditHours} </p>
+              <p>{result.grade}</p>
+            </div>
+          ))}
+
+          {/* <div className="modal_para_2 modal_para">
             <p>2</p>
             <p>Course Name</p>
             <p>2</p>
@@ -36,7 +42,7 @@ const ResultModal = () => {
             <p>Course Name</p>
             <p>2</p>
             <p>A</p>
-          </div>
+          </div> */}
         </div>
         <div className="modal_gpa_result">
           <h3>GPA : 3.53</h3>
