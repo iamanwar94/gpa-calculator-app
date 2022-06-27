@@ -1,11 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectFolderStatus } from "../../features/folderSlice";
 import { folded, unFolded } from "../../features/folderSlice";
-
+import axios from "axios";
 const ContactAddressAndForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   const status = useSelector(selectFolderStatus);
   const dispatch = useDispatch();
+
+  const nameChangeHandler = (e) => {
+    setName(e.target.value);
+  };
+  const emailChangeHandler = (e) => {
+    setEmail(e.target.value);
+  };
+  const messageChangeHandler = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const submitHandler = async () => {
+    const config = {
+      method: "POST",
+      url: "https://effiko-api.herokuapp.com/api/messages",
+      headers: {
+        "content-type": "application/json",
+      },
+      data: { user_name: name, email: email, message: message },
+    };
+    const response = await axios(config);
+    console.log(response);
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
   const clickHandler = () => {
     !status ? dispatch(folded()) : dispatch(unFolded());
   };
@@ -52,11 +83,23 @@ const ContactAddressAndForm = () => {
               <div className="input_name_email_wrapper">
                 <div className="input_name input_relative">
                   <label htmlFor="name">Name</label>
-                  <input type="text" id="name" placeholder="Full Name" />
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Full Name"
+                    value={name}
+                    onChange={nameChangeHandler}
+                  />
                 </div>
                 <div className="input_email input_relative">
                   <label htmlFor="email">Email</label>
-                  <input type="email" id="email" placeholder="Email" />
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={emailChangeHandler}
+                  />
                 </div>
               </div>
               {/* name and email wrapper ends  */}
@@ -66,9 +109,14 @@ const ContactAddressAndForm = () => {
                   name="message"
                   id="message"
                   placeholder="Message here..."
+                  value={message}
+                  onChange={messageChangeHandler}
                 ></textarea>
               </div>
-              <button className="btn btn-white contact_form_submit">
+              <button
+                className="btn btn-white contact_form_submit"
+                onClick={submitHandler}
+              >
                 Send
               </button>
             </div>

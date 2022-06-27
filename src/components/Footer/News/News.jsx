@@ -3,20 +3,29 @@ import "./News.css";
 import axios from "axios";
 
 const News = () => {
-  const newsReg = { name: "", email: "" };
-  const [news, setNews] = useState(newsReg);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
-  const baseURL= "https://effiko-api.herokuapp.com"
+  const nameChangeHandler = (e) => {
+    setName(e.target.value);
+  };
+  const emailChangeHandler = (e) => {
+    setEmail(e.target.value);
+  };
 
-  const clickHandler = (e) => {
-    e.prevent.default();
-    axios.post('/user', news)
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+  const clickHandler = async () => {
+    const config = {
+      method: "POST",
+      url: "https://effiko-api.herokuapp.com/api/subscriptions",
+      headers: {
+        "content-type": "application/json",
+      },
+      data: { user_name: name, email: email },
+    };
+    const response = await axios(config);
+    console.log(response);
+    setName("");
+    setEmail("");
   };
 
   return (
@@ -27,11 +36,23 @@ const News = () => {
       <div className="news_inputs_wrapper">
         <div className="news_input">
           <label htmlFor="name">Name</label>
-          <input type="text" placeholder="Full Name" id="name" />
+          <input
+            type="text"
+            placeholder="Full Name"
+            id="name"
+            value={name}
+            onChange={nameChangeHandler}
+          />
         </div>
         <div className="news_input">
           <label htmlFor="email">Email</label>
-          <input type="text" placeholder="Email" id="email" />
+          <input
+            type="text"
+            placeholder="Email"
+            id="email"
+            value={email}
+            onChange={emailChangeHandler}
+          />
         </div>
         <div className="news_btn">
           <button onClick={clickHandler}>Subscribe</button>

@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  gpaResult: [],
+  gpaResult: null,
+  gpa:""
 };
 
 const gpaResultSlice = createSlice({
@@ -9,14 +10,16 @@ const gpaResultSlice = createSlice({
   initialState,
   reducers: {
     showResult: (state, action) => {
-      state.gpaResult.push(action.payload);
+      state.gpaResult = (action.payload.courses);
+      state.gpa = (action.payload.gpa);
     },
     clearResult: (state) => {
-      state.gpaResult = [];
+      state.gpaResult = null;
     },
   },
 });
 
 export const { showResult, clearResult } = gpaResultSlice.actions;
 export const selectGpaResult = (state) => state.gpaResult.gpaResult;
+export const selectGpa = (state) => state.gpaResult.gpa;
 export default gpaResultSlice.reducer;

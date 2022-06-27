@@ -234,7 +234,7 @@ const Blogs = () => {
           {(filteredBlogs?filteredBlogs:blogs).map((blog) => (
             <div className="common_card" key={blog.id}>
               <img src={baseURL + image + blog.image} alt={blog.title} />
-              <Link to={`/blogs/${blog.id}`}>
+              <Link to={`/blog/${blog.id}`}>
                 <button> {blog.category_id.name} </button>
               </Link>
               <h3>{blog.title.slice(0, 24)}...</h3>

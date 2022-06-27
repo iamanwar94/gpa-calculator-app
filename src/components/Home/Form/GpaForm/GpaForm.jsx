@@ -63,7 +63,7 @@ const GpaForm = () => {
     setGpa(gpa);
     setCourses([courseFields(), courseFields(), courseFields()]);
     dispatch(clickTrue());
-    dispatch(showResult(courses))
+    dispatch(showResult({courses,gpa}))
   };
   const clearSubmitHandler = () => {
     setCourses([courseFields(), courseFields(), courseFields()]);
