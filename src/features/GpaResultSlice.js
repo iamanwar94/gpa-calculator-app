@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   gpaResult: null,
-  gpa:""
+  gpa: "",
 };
 
 const gpaResultSlice = createSlice({
@@ -10,11 +10,12 @@ const gpaResultSlice = createSlice({
   initialState,
   reducers: {
     showResult: (state, action) => {
-      state.gpaResult = (action.payload.courses);
-      state.gpa = (action.payload.gpa);
+      state.gpaResult = action.payload.courses;
+      state.gpa = action.payload.gpa;
     },
     clearResult: (state) => {
       state.gpaResult = null;
+      state.gpa = "";
     },
   },
 });

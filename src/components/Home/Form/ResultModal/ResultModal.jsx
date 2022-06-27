@@ -3,7 +3,11 @@ import "./ResultModal.css";
 import ellipse from "./images/Ellipse.png";
 import { clickFalse } from "../../../../features/gpaSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { selectGpaResult, clearResult, selectGpa } from "../../../../features/GpaResultSlice";
+import {
+  selectGpaResult,
+  clearResult,
+  selectGpa,
+} from "../../../../features/GpaResultSlice";
 
 const ResultModal = () => {
   const dispatch = useDispatch();
@@ -11,8 +15,8 @@ const ResultModal = () => {
   const gpa = useSelector(selectGpa);
   const clickHandler = () => {
     dispatch(clickFalse());
-    dispatch(clearResult())
-    console.log(gpaResult);
+    dispatch(clearResult());
+    console.log(gpa);
   };
   return (
     <div className="modal_wrapper">
@@ -24,9 +28,9 @@ const ResultModal = () => {
             <h6>Credit Hours</h6>
             <h6>Points</h6>
           </div>
-          {gpaResult.map((result,i) => (
+          {gpaResult?.map((result, i) => (
             <div className="modal_para_1 modal_para" key={i}>
-              <p>{i+1}</p>
+              <p>{i + 1}</p>
               <p> {result.course}</p>
               <p> {result.creditHours} </p>
               <p>{result.grade}</p>
